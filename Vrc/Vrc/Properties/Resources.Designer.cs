@@ -68,5 +68,25 @@ namespace Vrc.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] font {
+            get {
+                object obj = ResourceManager.GetObject("font", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] fontItalics {
+            get {
+                object obj = ResourceManager.GetObject("fontItalics", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }

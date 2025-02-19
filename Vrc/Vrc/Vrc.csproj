@@ -46,6 +46,8 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="CustomButton.cs" />
+        <Compile Include="CustomCheckBox.cs" />
         <Compile Include="Form1.cs">
             <SubType>Form</SubType>
         </Compile>
@@ -84,6 +86,7 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="Resources\cc894e4b_cac2_4ff2_8327_4b787907d956.jpg" />
+      <Content Include="Resources\font.ttf" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>
