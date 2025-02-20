@@ -1,7 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Vrc
@@ -14,6 +11,8 @@ namespace Vrc
         [STAThread]
         static void Main()
         {
+            AppDomain.CurrentDomain.ResourceResolve += (s, e) => typeof(Program).Assembly;
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             try
