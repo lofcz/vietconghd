@@ -4,9 +4,9 @@ using System.Windows.Forms;
 
 namespace Vrc
 {
-    public class GlassyPanel : Panel
+    public class CustomPanel : Panel
     {
-        public GlassyPanel()
+        public CustomPanel()
         {
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
         }
@@ -52,7 +52,7 @@ namespace Vrc
                 e.Graphics.FillRectangle(b, ClientRectangle);
             }
             
-            using (var p = new Pen(Color.Black, 2))
+            using (var p = new Pen(Color.Black, 1))
             {
                 // Výpočet souřadnic pro jednotlivé hrany
                 int x = ClientRectangle.X + 1;

@@ -31,14 +31,14 @@ namespace Vrc
         /// </summary>
         private void InitializeComponent()
         {
-            this.rightPanel = new Vrc.GlassyPanel();
+            this.rightPanel = new Vrc.CustomPanel();
             this.ExitCheckbox = new CustomCheckBox();
             this.PlayLabel = new System.Windows.Forms.Label();
             this.PlayFistAlpha = new CustomButton();
             this.PlayClassicButton = new CustomButton();
             this.HelpButton = new CustomButton();
-            this.bottomPanel = new Vrc.GlassyPanel();
-            this.mainPanel = new Vrc.GlassyPanel();
+            this.bottomPanel = new Vrc.CustomPanel();
+            this.mainPanel = new Vrc.CustomPanel();
             this.PostprocessingQualityLabel = new System.Windows.Forms.Label();
             this.PostprocessingQuality = new CustomComboBox();
             this.RankedMultiplayer = new CustomCheckBox();
@@ -47,7 +47,7 @@ namespace Vrc
             this.ForceVsync = new CustomCheckBox();
             this.ShowFps = new CustomCheckBox();
             this.ImprovedSoundCheck = new CustomCheckBox();
-            this.bgPicture = new System.Windows.Forms.PictureBox();
+            this.bgPicture = new Vrc.CustomPictureBox();
             this.rightPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bgPicture)).BeginInit();
@@ -101,6 +101,7 @@ namespace Vrc
             // 
             this.PlayFistAlpha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(160)))), ((int)(((byte)(89)))));
             this.PlayFistAlpha.BorderSize = 2;
+            this.PlayFistAlpha.FlatAppearance.BorderSize = 2;
             this.PlayFistAlpha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayFistAlpha.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.PlayFistAlpha.ForeColor = System.Drawing.Color.Black;
@@ -115,6 +116,7 @@ namespace Vrc
             // 
             this.PlayClassicButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(160)))), ((int)(((byte)(89)))));
             this.PlayClassicButton.BorderSize = 2;
+            this.PlayClassicButton.FlatAppearance.BorderSize = 2;
             this.PlayClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayClassicButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.PlayClassicButton.ForeColor = System.Drawing.Color.Black;
@@ -201,7 +203,7 @@ namespace Vrc
             this.RankedMultiplayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RankedMultiplayer.AutoSize = true;
             this.RankedMultiplayer.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.RankedMultiplayer.Location = new System.Drawing.Point(371, 266);
+            this.RankedMultiplayer.Location = new System.Drawing.Point(371, 281);
             this.RankedMultiplayer.Name = "RankedMultiplayer";
             this.RankedMultiplayer.Size = new System.Drawing.Size(190, 21);
             this.RankedMultiplayer.TabIndex = 5;
@@ -214,7 +216,7 @@ namespace Vrc
             this.DisableImprovedSounds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisableImprovedSounds.AutoSize = true;
             this.DisableImprovedSounds.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.DisableImprovedSounds.Location = new System.Drawing.Point(319, 239);
+            this.DisableImprovedSounds.Location = new System.Drawing.Point(319, 254);
             this.DisableImprovedSounds.Name = "DisableImprovedSounds";
             this.DisableImprovedSounds.Size = new System.Drawing.Size(242, 21);
             this.DisableImprovedSounds.TabIndex = 4;
@@ -226,7 +228,7 @@ namespace Vrc
             this.DisableTransVegetation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisableTransVegetation.AutoSize = true;
             this.DisableTransVegetation.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.DisableTransVegetation.Location = new System.Drawing.Point(340, 212);
+            this.DisableTransVegetation.Location = new System.Drawing.Point(340, 227);
             this.DisableTransVegetation.Name = "DisableTransVegetation";
             this.DisableTransVegetation.Size = new System.Drawing.Size(221, 21);
             this.DisableTransVegetation.TabIndex = 2;
@@ -238,7 +240,7 @@ namespace Vrc
             this.ForceVsync.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ForceVsync.AutoSize = true;
             this.ForceVsync.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.ForceVsync.Location = new System.Drawing.Point(116, 266);
+            this.ForceVsync.Location = new System.Drawing.Point(116, 281);
             this.ForceVsync.Name = "ForceVsync";
             this.ForceVsync.Size = new System.Drawing.Size(115, 21);
             this.ForceVsync.TabIndex = 2;
@@ -250,7 +252,7 @@ namespace Vrc
             this.ShowFps.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowFps.AutoSize = true;
             this.ShowFps.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.ShowFps.Location = new System.Drawing.Point(137, 239);
+            this.ShowFps.Location = new System.Drawing.Point(137, 254);
             this.ShowFps.Name = "ShowFps";
             this.ShowFps.Size = new System.Drawing.Size(94, 21);
             this.ShowFps.TabIndex = 1;
@@ -263,7 +265,7 @@ namespace Vrc
             this.ImprovedSoundCheck.AutoSize = true;
             this.ImprovedSoundCheck.CheckAlign = System.Drawing.ContentAlignment.TopRight;
             this.ImprovedSoundCheck.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ImprovedSoundCheck.Location = new System.Drawing.Point(76, 212);
+            this.ImprovedSoundCheck.Location = new System.Drawing.Point(76, 227);
             this.ImprovedSoundCheck.Name = "ImprovedSoundCheck";
             this.ImprovedSoundCheck.Size = new System.Drawing.Size(155, 21);
             this.ImprovedSoundCheck.TabIndex = 0;
@@ -312,7 +314,7 @@ namespace Vrc
 
         private System.Windows.Forms.Label PlayLabel;
 
-        private System.Windows.Forms.PictureBox bgPicture;
+        private CustomPictureBox bgPicture;
 
         private System.Windows.Forms.Label PostprocessingQualityLabel;
 
@@ -330,16 +332,16 @@ namespace Vrc
 
         private CustomCheckBox ImprovedSoundCheck;
 
-        private Vrc.GlassyPanel mainPanel;
+        private Vrc.CustomPanel mainPanel;
 
         private CustomButton HelpButton;
         private CustomButton PlayFistAlpha;
 
         private CustomButton PlayClassicButton;
 
-        private Vrc.GlassyPanel bottomPanel;
+        private Vrc.CustomPanel bottomPanel;
 
-        private Vrc.GlassyPanel rightPanel;
+        private Vrc.CustomPanel rightPanel;
 
         #endregion
     }
