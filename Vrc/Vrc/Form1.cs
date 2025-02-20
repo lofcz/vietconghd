@@ -23,23 +23,23 @@ namespace Vrc
         /// <summary>
         /// 3.cbf
         /// </summary>
-        public ulong Disso { get; set; } = 17103328593693516090;
+        public ulong Disso { get; set; } = 103;
         /// <summary>
         /// 4.cbf
         /// </summary>
-        public ulong Distra { get; set; } = 9561496664274228725;
+        public ulong Distra { get; set; } = 130060386;
         /// <summary>
         /// 3.cbf
         /// </summary>
-        public ulong Enso { get; set; } = 10429368783072318818;
+        public ulong Enso { get; set; } = 10080368;
         /// <summary>
         /// 4.cbf
         /// </summary>
-        public ulong Entra { get; set; } = 2059262151280239165;
+        public ulong Entra { get; set; } = 134767500;
         /// <summary>
         /// 4.cbf
         /// </summary>
-        public ulong Ranked { get; set; } = 14212456902882225252;
+        public ulong Ranked { get; set; } = 344468;
     }
 
     class ActiveRadhash
@@ -68,6 +68,18 @@ namespace Vrc
     
     public partial class Form1 : Form
     {
+        public static Task InvokeAsync(Control control, Action action)
+        {
+            if (control.InvokeRequired)
+            {
+                return Task.Factory.FromAsync(
+                    control.BeginInvoke(action),
+                    control.EndInvoke);
+            }
+            action();
+            return Task.CompletedTask;
+        }
+        
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
@@ -108,21 +120,22 @@ namespace Vrc
 
             StatusLabel.Text = "Probíhá synchronizace s konfigurací hry, okamžik strpení..";
             StatusLabel.Invalidate();
+
+            /*var info1 = new FileInfo("files\\disso\\3.cbf");
+            long hash1 =info1.Length;
             
-            /*using FileStream fs = new FileStream("files\\disso\\3.cbf", FileMode.Open);
-            ulong hash1 = XXHash3.Hash64(fs);
+            var info2 = new FileInfo("files\\distra\\4.cbf");
+            long hash2 =info2.Length;
             
-            using FileStream fs2 = new FileStream("files\\distra\\4.cbf", FileMode.Open);
-            ulong hash2 = XXHash3.Hash64(fs2);
-
-            using FileStream fs3 = new FileStream("files\\enso\\3.cbf", FileMode.Open);
-            ulong hash3 = XXHash3.Hash64(fs3);
-
-            using FileStream fs4 = new FileStream("files\\entra\\4.cbf", FileMode.Open);
-            ulong hash4 = XXHash3.Hash64(fs4);
-
-            using FileStream fs5 = new FileStream("files\\ranked\\4.cbf", FileMode.Open);
-            ulong hash5 = XXHash3.Hash64(fs5);*/
+            var info3 = new FileInfo("files\\enso\\3.cbf");
+            long hash3 =info3.Length;
+            
+            var info4 = new FileInfo("files\\entra\\4.cbf");
+            long hash4 =info4.Length;
+            
+            var info5 = new FileInfo("files\\ranked\\4.cbf");
+            long hash5 =info5.Length;*/
+            
 
             
             FormBorderStyle = FormBorderStyle.None;
@@ -183,8 +196,6 @@ namespace Vrc
             HelpButton.Font = labelsFont;
 
             PlayLabel.Font = playFont;
-            
-            
             
             TryFindGame();
             _ = GetHashes();
@@ -251,7 +262,7 @@ namespace Vrc
                 DisableTransVegetation.Checked = false;
             }
 
-            Invoke(() =>
+            await InvokeAsync(this, () =>
             {
                 StatusLabel.Text = string.Empty;
                 StatusLabel.Invalidate();
@@ -524,6 +535,44 @@ namespace Vrc
             catch (Exception e2)
             {
                 MessageBox.Show($"Nastavení vylepšených zvuků se nepodařilo uložit: {e2.Message}");
+            }
+        }
+
+        private void DisableTransVegetation_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!ready)
+            {
+                return;
+            }
+
+            try
+            {
+                if (DisableTransVegetation.Checked)
+                {
+                    if (File.Exists("files/entra/4.cbf"))
+                    {
+                        File.Copy("files/entra/4.cbf", "4.cbf", true);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Nastavení vylepšené vegetace se nepodařilo uložit, protože neexistuje soubor /files/entra/4.cbf");
+                    }
+                }
+                else
+                {
+                    if (File.Exists("files/distra/4.cbf"))
+                    {
+                        File.Copy("files/distra/4.cbf", "4.cbf", true);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Nastavení vylepšené vegetace se nepodařilo uložit, protože neexistuje soubor /files/distra/4.cbf");
+                    }
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show($"Nastavení vylepšené vegetace se nepodařilo uložit: {e2.Message}");
             }
         }
     }

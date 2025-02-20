@@ -249,6 +249,7 @@ namespace Vrc
             this.DisableTransVegetation.TabIndex = 2;
             this.DisableTransVegetation.Text = "Disable translucent vegetation";
             this.DisableTransVegetation.UseVisualStyleBackColor = true;
+            this.DisableTransVegetation.CheckedChanged += new System.EventHandler(this.DisableTransVegetation_CheckedChanged);
             // 
             // ForceVsync
             // 
