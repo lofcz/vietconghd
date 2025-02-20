@@ -246,6 +246,7 @@ namespace Vrc
             this.ForceVsync.TabIndex = 2;
             this.ForceVsync.Text = "Force V-Sync";
             this.ForceVsync.UseVisualStyleBackColor = true;
+            this.ForceVsync.CheckedChanged += new System.EventHandler(this.ForceVsync_CheckedChanged);
             // 
             // ShowFps
             // 

@@ -160,13 +160,16 @@ namespace Vrc
                string presetPath = parser.GetValue("GENERAL", "PresetPath");
                string forceVsync = parser.GetValue("APP", "ForceVsync");
 
-               if (showFps is not null)
+               if (showFps is "1")
                {
-                   if (showFps is "1")
-                   {
-                       ShowFps.Checked = true;
-                       ShowFps.Invalidate();
-                   }
+                   ShowFps.Checked = true;
+                   ShowFps.Invalidate();
+               }
+
+               if (forceVsync is "1")
+               {
+                   ForceVsync.Checked = true;
+                   ShowFps.Invalidate();
                }
             }
             catch (Exception e)
@@ -264,6 +267,11 @@ namespace Vrc
         private void ShowFps_CheckedChanged(object sender, EventArgs e)
         {
             TrySetReShadeValue("OVERLAY", "ShowFPS", ShowFps.Checked ? "1" : "0");
+        }
+
+        private void ForceVsync_CheckedChanged(object sender, EventArgs e)
+        {
+            TrySetReShadeValue("APP", "ForceVsync", ForceVsync.Checked ? "1" : "0");
         }
     }
 }
