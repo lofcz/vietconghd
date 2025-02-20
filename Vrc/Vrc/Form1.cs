@@ -17,6 +17,24 @@ using Exception = System.Exception;
 
 namespace Vrc
 {
+    public class QualityItem
+    {
+        public string Text { get; set; }
+        public int Value { get; set; }
+
+        public override string ToString()
+        {
+            return Text;
+        }
+
+        public QualityItem(string text, int value)
+        {
+            Text = text;
+            Value = value;
+        }
+    }
+
+    
     public partial class Form1 : Form
     {
         private const int WM_NCHITTEST = 0x84;
@@ -28,6 +46,7 @@ namespace Vrc
         private Font checksFont;
 
         private IniParser parser;
+        private bool ready;
         
         // we need to hold on this and prevent GC from collecting it
         PrivateFontCollection pfc = new PrivateFontCollection();
@@ -75,6 +94,27 @@ namespace Vrc
             ExitCheckbox.Parent = rightPanel;
 
 
+            PostprocessingQuality.Items.Clear();
+
+            List<QualityItem> items =
+            [
+                new QualityItem("Extreme", 0),
+                new QualityItem("Ultra", 1),
+                new QualityItem("Very High", 2),
+                new QualityItem("High", 3),
+                new QualityItem("Medium", 4),
+                new QualityItem("Low", 5),
+                new QualityItem("Ultra Low", 6)
+            ];
+
+            foreach (QualityItem item in items)
+            {
+                PostprocessingQuality.Items.Add(item);
+            }
+            
+            PostprocessingQuality.DisplayMember = "Text";
+            PostprocessingQuality.ValueMember = "Value";
+            
             InitFonts();
 
 
@@ -94,6 +134,7 @@ namespace Vrc
             PlayLabel.Font = playFont;
             
             TryFindGame();
+            ready = true;
         }
 
         Exception? TrySetReShadeValue(string section, string key, string value)
@@ -171,6 +212,27 @@ namespace Vrc
                    ForceVsync.Checked = true;
                    ShowFps.Invalidate();
                }
+
+               if (presetPath is not null)
+               {
+                   char presetN = presetPath.FirstOrDefault(char.IsDigit);
+
+                   if (presetN is not '\0')
+                   {
+                       int presetNumber = int.Parse(presetN.ToString());
+        
+                       for (int i = 0; i < PostprocessingQuality.Items.Count; i++)
+                       {
+                           QualityItem item = (QualityItem)PostprocessingQuality.Items[i];
+                           
+                           if (item.Value == presetNumber)
+                           {
+                               PostprocessingQuality.SelectedIndex = i;
+                               break;
+                           }
+                       }
+                   }
+               }
             }
             catch (Exception e)
             {
@@ -224,7 +286,13 @@ namespace Vrc
 
         private void PostprocessingQuality_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (!ready)
+            {
+                return;
+            }
 
+            QualityItem item = (QualityItem)PostprocessingQuality.SelectedItem;
+            TrySetReShadeValue("GENERAL", "PresetPath", $".\\presets\\{item.Value}\\ReShadePreset.ini");
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -266,11 +334,21 @@ namespace Vrc
 
         private void ShowFps_CheckedChanged(object sender, EventArgs e)
         {
+            if (!ready)
+            {
+                return;
+            }
+            
             TrySetReShadeValue("OVERLAY", "ShowFPS", ShowFps.Checked ? "1" : "0");
         }
 
         private void ForceVsync_CheckedChanged(object sender, EventArgs e)
         {
+            if (!ready)
+            {
+                return;
+            }
+            
             TrySetReShadeValue("APP", "ForceVsync", ForceVsync.Checked ? "1" : "0");
         }
     }
