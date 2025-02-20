@@ -13,6 +13,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using Exception = System.Exception;
 
 namespace Vrc
 {
@@ -25,6 +26,8 @@ namespace Vrc
         private Font playFont;
         private Font labelsFont;
         private Font checksFont;
+
+        private IniParser parser;
         
         // we need to hold on this and prevent GC from collecting it
         PrivateFontCollection pfc = new PrivateFontCollection();
@@ -93,6 +96,30 @@ namespace Vrc
             TryFindGame();
         }
 
+        Exception? TrySetReShadeValue(string section, string key, string value)
+        {
+            if (!File.Exists("ReShade.ini"))
+            {
+                MessageBox.Show("Nastavení se nepodařilo uložit, ReShade.ini neexistuje");
+                return new Exception("ReShade.ini neexistuje"); 
+            }
+            
+            try
+            {
+                parser = new IniParser("ReShade.ini");
+                parser.DisableIniAutoSave();
+
+                parser.SetValue(section, key, value);
+                parser.SaveIni();
+                return null;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Nastavení se nepodařilo uložit: {e.Message}");
+                return e;
+            }
+        }
+
         void TryFindGame()
         {
             try
@@ -114,6 +141,39 @@ namespace Vrc
             {
                 MessageBox.Show("Vietcong Remastered Launcher vložte do složky, ve které je vietcong.exe");
                 Close();
+                return;
+            }
+
+            if (!File.Exists("ReShade.ini"))
+            {
+                MessageBox.Show("Vietcong Remastered obsahuje soubor ReShade.ini, který nebyl nalezen. Umístěte vietcong_remastered.exe do složky, ve které je vietcong.exe a ReShade.ini");
+                Close();
+                return;
+            }
+
+            try
+            {
+                parser = new IniParser("ReShade.ini");
+                parser.DisableIniAutoSave();
+
+               string showFps = parser.GetValue("OVERLAY", "ShowFPS");
+               string presetPath = parser.GetValue("GENERAL", "PresetPath");
+               string forceVsync = parser.GetValue("APP", "ForceVsync");
+
+               if (showFps is not null)
+               {
+                   if (showFps is "1")
+                   {
+                       ShowFps.Checked = true;
+                       ShowFps.Invalidate();
+                   }
+               }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show($"Během parsování ReShade.ini nastala neočekávaná chyba: {e.Message}");
+                Close();
+                return;
             }
         }
         
@@ -199,6 +259,11 @@ namespace Vrc
         private void ExitCheckbox_CheckedChanged(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ShowFps_CheckedChanged(object sender, EventArgs e)
+        {
+            TrySetReShadeValue("OVERLAY", "ShowFPS", ShowFps.Checked ? "1" : "0");
         }
     }
 }

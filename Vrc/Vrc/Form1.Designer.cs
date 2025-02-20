@@ -258,6 +258,7 @@ namespace Vrc
             this.ShowFps.TabIndex = 1;
             this.ShowFps.Text = "Show FPS";
             this.ShowFps.UseVisualStyleBackColor = true;
+            this.ShowFps.CheckedChanged += new System.EventHandler(this.ShowFps_CheckedChanged);
             // 
             // ImprovedSoundCheck
             // 
