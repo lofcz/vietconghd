@@ -38,7 +38,7 @@ namespace Vrc
             this.bottomPanel = new Vrc.GlassyPanel();
             this.mainPanel = new Vrc.GlassyPanel();
             this.PostprocessingQualityLabel = new System.Windows.Forms.Label();
-            this.PostprocessingQuality = new System.Windows.Forms.ComboBox();
+            this.PostprocessingQuality = new CustomComboBox();
             this.RankedMultiplayer = new CustomCheckBox();
             this.DisableImprovedSounds = new CustomCheckBox();
             this.DisableTransVegetation = new CustomCheckBox();
@@ -152,6 +152,7 @@ namespace Vrc
             this.PostprocessingQuality.Name = "PostprocessingQuality";
             this.PostprocessingQuality.Size = new System.Drawing.Size(150, 24);
             this.PostprocessingQuality.TabIndex = 7;
+            this.PostprocessingQuality.SelectedIndexChanged += new System.EventHandler(this.PostprocessingQuality_SelectedIndexChanged);
             // 
             // RankedMultiplayer
             // 
@@ -266,7 +267,7 @@ namespace Vrc
 
         private System.Windows.Forms.Label PostprocessingQualityLabel;
 
-        private System.Windows.Forms.ComboBox PostprocessingQuality;
+        private CustomComboBox PostprocessingQuality;
 
         private CustomCheckBox ForceVsync;
 

@@ -36,8 +36,14 @@ namespace Vrc
             rightPanel.Parent = bgPicture;
             
             PostprocessingQualityLabel.Parent = mainPanel;
+            PostprocessingQuality.Parent = mainPanel;
             ImprovedSoundCheck.Parent = mainPanel;
-
+            ImprovedSoundCheck.Parent = mainPanel;
+            ShowFps.Parent = mainPanel;
+            ForceVsync.Parent = mainPanel;
+            DisableTransVegetation.Parent = mainPanel;
+            DisableImprovedSounds.Parent = mainPanel;
+            RankedMultiplayer.Parent = mainPanel;
             
             
             InitFonts();
@@ -96,6 +102,11 @@ namespace Vrc
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void PostprocessingQuality_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }

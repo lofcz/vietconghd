@@ -1,13 +1,37 @@
 
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 public class CustomCheckBox : CheckBox
 {
+    private bool isHovered = false;
+    private readonly Color normalColor = Color.FromArgb(141, 160, 89);
+    private readonly Color hoverColor;
+
     public CustomCheckBox()
     {
-        SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-        this.BackColor = Color.Transparent;
+        this.FlatStyle = FlatStyle.Standard;
+        
+        // Výpočet světlejší barvy pro hover (o 15% světlejší)
+        float factor = 1.15f;
+        int r = Math.Min(255, (int)(normalColor.R * factor));
+        int g = Math.Min(255, (int)(normalColor.G * factor));
+        int b = Math.Min(255, (int)(normalColor.B * factor));
+        hoverColor = Color.FromArgb(r, g, b);
+
+        // Přidání handleru pro sledování myši
+        this.MouseEnter += (s, e) => 
+        {
+            isHovered = true;
+            this.Invalidate();
+        };
+        
+        this.MouseLeave += (s, e) => 
+        {
+            isHovered = false;
+            this.Invalidate();
+        };
     }
 
     protected override void OnPaint(PaintEventArgs e)
@@ -17,8 +41,8 @@ public class CustomCheckBox : CheckBox
         // Získáme obdélník, kde se nachází checkbox (bez textu)
         Rectangle checkRect = this.GetScaledCheckRect();
 
-        // Vykreslení pozadí checkboxu - vždy zelené
-        using (var brush = new SolidBrush(Color.FromArgb(141, 160, 89)))
+        // Vykreslení pozadí checkboxu - použijeme hover barvu pokud je myš nad kontrolem
+        using (var brush = new SolidBrush(isHovered ? hoverColor : normalColor))
         {
             e.Graphics.FillRectangle(brush, checkRect);
         }
@@ -72,4 +96,5 @@ public class CustomCheckBox : CheckBox
         return rect;
     }
 }
+
 
