@@ -419,11 +419,6 @@ namespace Vrc
 
         }
 
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void PostprocessingQuality_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!ready)
@@ -611,6 +606,47 @@ namespace Vrc
             catch (Exception e2)
             {
                 MessageBox.Show($"Nastavení vylepšených zvuků zbraní se nepodařilo uložit: {e2.Message}");
+            }
+        }
+        
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (RankedMultiplayer.Checked)
+                {
+                    DisableTransVegetation.Checked = true;
+                    DisableTransVegetation.Enabled = false;
+                    DisableTransVegetation.Invalidate();
+
+                    if (File.Exists("files/ranked/4.cbf"))
+                    {
+                        File.Copy("files/ranked/4.cbf", "4.cbf", true);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Nastavení hodnocené hry se nepodařilo uložit, protože neexistuje soubor /files/ranked/4.cbf");
+                    }
+                }
+                else
+                {
+                    DisableTransVegetation.Checked = true;
+                    DisableTransVegetation.Enabled = true;
+                    DisableTransVegetation.Invalidate();
+                    
+                    if (File.Exists("files/entra/4.cbf"))
+                    {
+                        File.Copy("files/entra/4.cbf", "4.cbf", true);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Nastavení hodnocené hry se nepodařilo uložit, protože neexistuje soubor /files/entra/4.cbf");
+                    }
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show($"Nastavení hodnocené hry se nepodařilo uložit: {e2.Message}");
             }
         }
     }
