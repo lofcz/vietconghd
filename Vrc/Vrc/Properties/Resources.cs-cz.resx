@@ -125,4 +125,7 @@
     <data name="UltraLow" xml:space="preserve">
         <value>Velmi nízká</value>
     </data>
+    <data name="CultureError" xml:space="preserve">
+        <value>Nepodařilo se nastavit kulturu: {0}</value>
+    </data>
 </root>

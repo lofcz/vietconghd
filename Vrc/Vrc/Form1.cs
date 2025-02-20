@@ -6,10 +6,12 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Flurl.Http;
@@ -121,6 +123,19 @@ namespace Vrc
             catch (Exception e)
             {
                 
+            }
+
+            if (cfg.Culture is not null)
+            {
+                try
+                {
+                    Thread.CurrentThread.CurrentCulture = new CultureInfo(cfg.Culture);
+                    Thread.CurrentThread.CurrentUICulture = new CultureInfo(cfg.Culture);
+                }
+                catch (CultureNotFoundException ex)
+                {
+                    MessageBox.Show(string.Format(Resources.Culture, ex.Message));
+                }
             }
             
             // localization

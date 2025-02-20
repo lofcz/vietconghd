@@ -88,6 +88,15 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Failed to set the culture: {0}.
+        /// </summary>
+        internal static string CultureError {
+            get {
+                return ResourceManager.GetString("CultureError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disable improved weapon sounds.
         /// </summary>
         internal static string DisableImprovedWeaponsSound {

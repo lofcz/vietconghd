@@ -241,4 +241,7 @@
   <data name="UltraLow" xml:space="preserve">
     <value>Ultra Low</value>
   </data>
+  <data name="CultureError" xml:space="preserve">
+    <value>Failed to set the culture: {0}</value>
+  </data>
 </root>
