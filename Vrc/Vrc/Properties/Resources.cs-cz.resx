@@ -128,4 +128,7 @@
     <data name="CultureError" xml:space="preserve">
         <value>Nepodařilo se nastavit kulturu: {0}</value>
     </data>
+    <data name="AppIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+        <value>../icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+    </data>
 </root>

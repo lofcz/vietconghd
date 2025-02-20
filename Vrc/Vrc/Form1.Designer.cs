@@ -321,9 +321,9 @@ namespace Vrc
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.ShowIcon = false;
+            this.ShowIcon = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Vietcong HD Remaster";
             this.rightPanel.ResumeLayout(false);
             this.rightPanel.PerformLayout();
             this.bottomPanel.ResumeLayout(false);

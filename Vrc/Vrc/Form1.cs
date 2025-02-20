@@ -107,8 +107,9 @@ namespace Vrc
 
         public Form1()
         {
-            InitializeComponent();
-
+            InitializeComponent(); 
+            // Icon = Resources.AppIcon;
+            
             // local config
             try
             {
@@ -154,23 +155,6 @@ namespace Vrc
             
             StatusLabel.Text = Resources.UiSynchronizing;
             StatusLabel.Invalidate();
-
-            /*var info1 = new FileInfo("files\\disso\\3.cbf");
-            long hash1 =info1.Length;
-            
-            var info2 = new FileInfo("files\\distra\\4.cbf");
-            long hash2 =info2.Length;
-            
-            var info3 = new FileInfo("files\\enso\\3.cbf");
-            long hash3 =info3.Length;
-            
-            var info4 = new FileInfo("files\\entra\\4.cbf");
-            long hash4 =info4.Length;
-            
-            var info5 = new FileInfo("files\\ranked\\4.cbf");
-            long hash5 =info5.Length;*/
-            
-
             
             FormBorderStyle = FormBorderStyle.None;
 
@@ -189,8 +173,7 @@ namespace Vrc
             RankedMultiplayer.Parent = mainPanel;
             PlayLabel.Parent = rightPanel;
             ExitCheckbox.Parent = rightPanel;
-
-
+            
             PostprocessingQuality.Items.Clear();
 
             List<QualityItem> items =
@@ -213,8 +196,7 @@ namespace Vrc
             PostprocessingQuality.ValueMember = "Value";
             
             InitFonts();
-
-
+            
             PostprocessingQualityLabel.Font = labelsFont;
             ImprovedSoundCheck.Font = checksFont;
             ShowFps.Font = checksFont;
@@ -247,6 +229,44 @@ namespace Vrc
                 if (upstreamRadhash.Length > 0)
                 {
                     radhash = JsonConvert.DeserializeObject<Radhash>(upstreamRadhash);
+                }
+            }
+            catch (Exception e)
+            {
+                
+            }
+
+            // read length of local files if available
+            try
+            {
+                if (File.Exists("files\\disso\\3.cbf"))
+                {
+                    FileInfo info1 = new FileInfo("files\\disso\\3.cbf");
+                    radhash.Disso = info1.Length;
+                }
+
+                if (File.Exists("files\\distra\\4.cbf"))
+                {
+                    FileInfo info2 = new FileInfo("files\\distra\\4.cbf");
+                    radhash.Distra = info2.Length;
+                }
+
+                if (File.Exists("files\\enso\\3.cbf"))
+                {
+                    FileInfo info3 = new FileInfo("files\\enso\\3.cbf");
+                    radhash.Enso = info3.Length;
+                }
+
+                if (File.Exists("files\\entra\\4.cbf"))
+                {
+                    FileInfo info4 = new FileInfo("files\\entra\\4.cbf");
+                    radhash.Entra = info4.Length;
+                }
+
+                if (File.Exists("files\\ranked\\4.cbf"))
+                {
+                    FileInfo info5 = new FileInfo("files\\ranked\\4.cbf");
+                    radhash.Ranked = info5.Length;
                 }
             }
             catch (Exception e)

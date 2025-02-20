@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.Drawing;
+
 namespace Vrc.Properties {
     using System;
     
@@ -84,6 +86,16 @@ namespace Vrc.Properties {
             get {
                 object obj = ResourceManager.GetObject("cc894e4b_cac2_4ff2_8327_4b787907d956", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static Icon AppIcon {
+            get {
+                object obj = ResourceManager.GetObject("AppIcon", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
