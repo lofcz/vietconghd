@@ -454,7 +454,40 @@ namespace Vrc
 
         private void PlayClassicButton_Click(object sender, EventArgs e)
         {
+            if (!File.Exists("vietcong.exe"))
+            {
+                MessageBox.Show("Hru není možné spustit, protože soubor vietcong.exe neexistuje");
+                return;
+            }
+
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = "vietcong.exe",
+                UseShellExecute = true,
+                Arguments = "-addon classic"
+            };
             
+            using Process _ = Process.Start(psi);
+            Close();
+        }
+        
+        private void PlayFistAlpha_Click(object sender, EventArgs e)
+        {
+            if (!File.Exists("vietcong.exe"))
+            {
+                MessageBox.Show("Hru není možné spustit, protože soubor vietcong.exe neexistuje");
+                return;
+            }
+
+            ProcessStartInfo psi = new ProcessStartInfo
+            {
+                FileName = "vietcong.exe",
+                UseShellExecute = true,
+                Arguments = "-addon fistalpha"
+            };
+            
+            using Process _ = Process.Start(psi);
+            Close();
         }
 
         private void PlayLabel_Click(object sender, EventArgs e)

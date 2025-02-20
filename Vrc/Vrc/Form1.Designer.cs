@@ -113,6 +113,7 @@ namespace Vrc
             this.PlayFistAlpha.TabIndex = 2;
             this.PlayFistAlpha.Text = "Fist Alpha DLC";
             this.PlayFistAlpha.UseVisualStyleBackColor = true;
+            this.PlayFistAlpha.Click += new System.EventHandler(this.PlayFistAlpha_Click);
             // 
             // PlayClassicButton
             // 
