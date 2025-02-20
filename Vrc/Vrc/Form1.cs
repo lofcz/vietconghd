@@ -649,5 +649,34 @@ namespace Vrc
                 MessageBox.Show($"Nastavení hodnocené hry se nepodařilo uložit: {e2.Message}");
             }
         }
+
+        private void HelpButton_Click(object sender, EventArgs e)
+        {
+            if (File.Exists("navod.pdf"))
+            {
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = "navod.pdf",
+                    UseShellExecute = true
+                };
+            
+                using Process _ = Process.Start(psi);
+                return;
+            }
+            
+            if (File.Exists("help.pdf"))
+            {
+                ProcessStartInfo psi = new ProcessStartInfo
+                {
+                    FileName = "help.pdf",
+                    UseShellExecute = true
+                };
+            
+                using Process _ = Process.Start(psi);
+                return;
+            }
+
+            MessageBox.Show("Nápovědu není možné zobrazit, protože chybí soubor navod.pdf");
+        }
     }
 }

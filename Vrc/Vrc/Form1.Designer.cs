@@ -143,6 +143,7 @@ namespace Vrc
             this.HelpButton.TabIndex = 0;
             this.HelpButton.Text = "Help";
             this.HelpButton.UseVisualStyleBackColor = true;
+            this.HelpButton.Click += new System.EventHandler(this.HelpButton_Click);
             // 
             // bottomPanel
             // 
