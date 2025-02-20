@@ -184,4 +184,61 @@
   <data name="UiSynchronizing" xml:space="preserve">
     <value>Synchronizing with the game configuration, a moment of patience...</value>
   </data>
+  <data name="PostprocessingQuality" xml:space="preserve">
+    <value>Postprocessing quality</value>
+  </data>
+  <data name="Improved3dSound" xml:space="preserve">
+    <value>Improved 3D Sound</value>
+  </data>
+  <data name="ShowFps" xml:space="preserve">
+    <value>Show FPS</value>
+  </data>
+  <data name="ForceVSync" xml:space="preserve">
+    <value>Force V-Sync</value>
+  </data>
+  <data name="DisableTranslucentVegetation" xml:space="preserve">
+    <value>Disable translucent vegetation</value>
+  </data>
+  <data name="DisableImprovedWeaponsSound" xml:space="preserve">
+    <value>Disable improved weapon sounds</value>
+  </data>
+  <data name="RankedMode" xml:space="preserve">
+    <value>Ranked multiplayer mode</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="VietcongClassic" xml:space="preserve">
+    <value>Vietcong Classic</value>
+  </data>
+  <data name="FistAlpha" xml:space="preserve">
+    <value>Fist Alpha DLC</value>
+  </data>
+  <data name="Extreme" xml:space="preserve">
+    <value>Extreme</value>
+  </data>
+  <data name="Ultra" xml:space="preserve">
+    <value>Ultra</value>
+  </data>
+  <data name="VeryHigh" xml:space="preserve">
+    <value>Very High</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="UltraLow" xml:space="preserve">
+    <value>Ultra Low</value>
+  </data>
 </root>

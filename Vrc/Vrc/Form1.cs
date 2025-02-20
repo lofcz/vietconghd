@@ -107,6 +107,36 @@ namespace Vrc
         {
             InitializeComponent();
 
+            // local config
+            try
+            {
+                if (!File.Exists("vrc.json"))
+                {
+                    File.WriteAllText("vrc.json", "{}");
+                }
+                
+                string data = File.ReadAllText("vrc.json");
+                cfg = JsonConvert.DeserializeObject<VrcCfg>(data);
+            }
+            catch (Exception e)
+            {
+                
+            }
+            
+            // localization
+            PostprocessingQualityLabel.Text = Resources.PostprocessingQuality;
+            ImprovedSoundCheck.Text = Resources.Improved3dSound;
+            ShowFps.Text = Resources.ShowFps;
+            ForceVsync.Text = Resources.ForceVSync;
+            DisableTransVegetation.Text = Resources.DisableTranslucentVegetation;
+            DisableImprovedSounds.Text = Resources.DisableImprovedWeaponsSound;
+            RankedMultiplayer.Text = Resources.RankedMode;
+            ExitCheckbox.Text = Resources.Exit;
+            HelpButton.Text = Resources.Help;
+            PlayLabel.Text = Resources.Play;
+            PlayClassicButton.Text = Resources.VietcongClassic;
+            PlayFistAlpha.Text = Resources.FistAlpha;
+            
             StatusLabel.Text = Resources.UiSynchronizing;
             StatusLabel.Invalidate();
 
@@ -150,13 +180,13 @@ namespace Vrc
 
             List<QualityItem> items =
             [
-                new QualityItem("Extreme", 0),
-                new QualityItem("Ultra", 1),
-                new QualityItem("Very High", 2),
-                new QualityItem("High", 3),
-                new QualityItem("Medium", 4),
-                new QualityItem("Low", 5),
-                new QualityItem("Ultra Low", 6)
+                new QualityItem(Resources.Extreme, 0),
+                new QualityItem(Resources.Ultra, 1),
+                new QualityItem(Resources.VeryHigh, 2),
+                new QualityItem(Resources.High, 3),
+                new QualityItem(Resources.Medium, 4),
+                new QualityItem(Resources.Low, 5),
+                new QualityItem(Resources.UltraLow, 6)
             ];
 
             foreach (QualityItem item in items)
@@ -298,21 +328,6 @@ namespace Vrc
 
         void TryFindGame()
         {
-            try
-            {
-                if (!File.Exists("vrc.json"))
-                {
-                    File.WriteAllText("vrc.json", "{}");
-                }
-                
-                string data = File.ReadAllText("vrc.json");
-                cfg = JsonConvert.DeserializeObject<VrcCfg>(data);
-            }
-            catch (Exception e)
-            {
-                
-            }
-
             if (!File.Exists("vietcong.exe"))
             {
                 MessageBox.Show(Resources.ReShadeError2);

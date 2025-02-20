@@ -68,4 +68,61 @@
     <data name="UiSynchronizing" xml:space="preserve">
         <value>Probíhá synchronizace s konfigurací hry, okamžik strpení..</value>
     </data>
+    <data name="PostprocessingQuality" xml:space="preserve">
+        <value>Kvalita postprocessingu</value>
+    </data>
+    <data name="Improved3dSound" xml:space="preserve">
+        <value>Vylepšený 3D zvuk</value>
+    </data>
+    <data name="ShowFps" xml:space="preserve">
+        <value>Zobrazit FPS</value>
+    </data>
+    <data name="ForceVSync" xml:space="preserve">
+        <value>Vynutit V-Sync</value>
+    </data>
+    <data name="DisableTranslucentVegetation" xml:space="preserve">
+        <value>Vypnout průsvitnou vegetaci</value>
+    </data>
+    <data name="DisableImprovedWeaponsSound" xml:space="preserve">
+        <value>Vypnout vylepšené zvuky zbraní</value>
+    </data>
+    <data name="RankedMode" xml:space="preserve">
+        <value>Hodnocený režim pro více hráčů</value>
+    </data>
+    <data name="Exit" xml:space="preserve">
+        <value>Ukončit</value>
+    </data>
+    <data name="Help" xml:space="preserve">
+        <value>Manuál</value>
+    </data>
+    <data name="Play" xml:space="preserve">
+        <value>Hrát</value>
+    </data>
+    <data name="VietcongClassic" xml:space="preserve">
+        <value>Vietcong Klasika</value>
+    </data>
+    <data name="FistAlpha" xml:space="preserve">
+        <value>Pěst Alpha DLC</value>
+    </data>
+    <data name="Extreme" xml:space="preserve">
+        <value>Extrémní</value>
+    </data>
+    <data name="Ultra" xml:space="preserve">
+        <value>Ultra</value>
+    </data>
+    <data name="VeryHigh" xml:space="preserve">
+        <value>Velmi vysoká</value>
+    </data>
+    <data name="High" xml:space="preserve">
+        <value>Vysoká</value>
+    </data>
+    <data name="Medium" xml:space="preserve">
+        <value>Střední</value>
+    </data>
+    <data name="Low" xml:space="preserve">
+        <value>Nízká</value>
+    </data>
+    <data name="UltraLow" xml:space="preserve">
+        <value>Velmi nízká</value>
+    </data>
 </root>

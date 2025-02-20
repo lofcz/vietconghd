@@ -88,6 +88,51 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Disable improved weapon sounds.
+        /// </summary>
+        internal static string DisableImprovedWeaponsSound {
+            get {
+                return ResourceManager.GetString("DisableImprovedWeaponsSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Disable translucent vegetation.
+        /// </summary>
+        internal static string DisableTranslucentVegetation {
+            get {
+                return ResourceManager.GetString("DisableTranslucentVegetation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Exit.
+        /// </summary>
+        internal static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Extreme.
+        /// </summary>
+        internal static string Extreme {
+            get {
+                return ResourceManager.GetString("Extreme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fist Alpha DLC.
+        /// </summary>
+        internal static string FistAlpha {
+            get {
+                return ResourceManager.GetString("FistAlpha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] font {
@@ -108,11 +153,83 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Force V-Sync.
+        /// </summary>
+        internal static string ForceVSync {
+            get {
+                return ResourceManager.GetString("ForceVSync", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        internal static string Help {
+            get {
+                return ResourceManager.GetString("Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help cannot be displayed because the navod.pdf file is missing.
         /// </summary>
         internal static string HelpError {
             get {
                 return ResourceManager.GetString("HelpError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to High.
+        /// </summary>
+        internal static string High {
+            get {
+                return ResourceManager.GetString("High", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Improved 3D Sound.
+        /// </summary>
+        internal static string Improved3dSound {
+            get {
+                return ResourceManager.GetString("Improved3dSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Low.
+        /// </summary>
+        internal static string Low {
+            get {
+                return ResourceManager.GetString("Low", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Medium.
+        /// </summary>
+        internal static string Medium {
+            get {
+                return ResourceManager.GetString("Medium", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Play.
+        /// </summary>
+        internal static string Play {
+            get {
+                return ResourceManager.GetString("Play", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Postprocessing quality.
+        /// </summary>
+        internal static string PostprocessingQuality {
+            get {
+                return ResourceManager.GetString("PostprocessingQuality", resourceCulture);
             }
         }
         
@@ -140,6 +257,15 @@ namespace Vrc.Properties {
         internal static string RankedErrorgeneric {
             get {
                 return ResourceManager.GetString("RankedErrorgeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ranked multiplayer mode.
+        /// </summary>
+        internal static string RankedMode {
+            get {
+                return ResourceManager.GetString("RankedMode", resourceCulture);
             }
         }
         
@@ -189,11 +315,38 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Show FPS.
+        /// </summary>
+        internal static string ShowFps {
+            get {
+                return ResourceManager.GetString("ShowFps", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Synchronizing with the game configuration, a moment of patience....
         /// </summary>
         internal static string UiSynchronizing {
             get {
                 return ResourceManager.GetString("UiSynchronizing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ultra.
+        /// </summary>
+        internal static string Ultra {
+            get {
+                return ResourceManager.GetString("Ultra", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ultra Low.
+        /// </summary>
+        internal static string UltraLow {
+            get {
+                return ResourceManager.GetString("UltraLow", resourceCulture);
             }
         }
         
@@ -221,6 +374,24 @@ namespace Vrc.Properties {
         internal static string VegetationErrorGeneric {
             get {
                 return ResourceManager.GetString("VegetationErrorGeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Very High.
+        /// </summary>
+        internal static string VeryHigh {
+            get {
+                return ResourceManager.GetString("VeryHigh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vietcong Classic.
+        /// </summary>
+        internal static string VietcongClassic {
+            get {
+                return ResourceManager.GetString("VietcongClassic", resourceCulture);
             }
         }
         
