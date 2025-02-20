@@ -71,7 +71,7 @@ public class CustomComboBox : ComboBox
         if (SelectedIndex >= 0)
         {
             string text = Items[SelectedIndex].ToString();
-            using (var brush = new SolidBrush(ForeColor))
+            using (SolidBrush brush = new SolidBrush(ForeColor))
             {
                 // Leave room for the arrow on the left.
                 Rectangle textRect = new Rectangle(30, 0, Width - 30, Height);
@@ -84,17 +84,17 @@ public class CustomComboBox : ComboBox
         int arrowSize = 8;
         int arrowLeft = 10;
         int arrowTop = (Height - arrowSize) / 2;
-        Point[] arrowPoints = new Point[]
-        {
+        Point[] arrowPoints =
+        [
             new Point(arrowLeft - 2, arrowTop),
             new Point(arrowLeft + arrowSize + 2, arrowTop),
             new Point(arrowLeft + arrowSize / 2, arrowTop + arrowSize - 1)
-        };
-        using(var brush = new SolidBrush(arrowColor))
+        ];
+        using(SolidBrush brush = new SolidBrush(arrowColor))
         {
             e.Graphics.FillPolygon(brush, arrowPoints);
         }
-        using(var pen = new Pen(arrowColor, 1))
+        using(Pen pen = new Pen(arrowColor, 1))
         {
             e.Graphics.DrawLine(pen,
                     arrowLeft - 1,

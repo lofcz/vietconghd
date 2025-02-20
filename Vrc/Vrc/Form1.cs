@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -80,6 +81,20 @@ namespace Vrc
             HelpButton.Font = labelsFont;
 
             PlayLabel.Font = playFont;
+            
+            TryFindGame();
+        }
+
+        void TryFindGame()
+        {
+            if (!File.Exists("vrc.json"))
+            {
+                File.WriteAllText("vrc.json", "{}");
+            }
+
+            string data = File.ReadAllText("vrc.json");
+            
+            
         }
 
         void InitFonts()
@@ -88,7 +103,7 @@ namespace Vrc
 
             //Select your font from the resources.
             //My font here is "Digireu.ttf"
-            var font = Properties.Resources.fontItalics;
+            byte[] font = Properties.Resources.fontItalics;
 
             int fontLength = font.Length;
 

@@ -38,7 +38,7 @@ namespace Vrc
         {
             get
             {
-                var cp = base.CreateParams;
+                CreateParams cp = base.CreateParams;
                 cp.ExStyle = cp.ExStyle | WS_EX_TRANSPARENT;
 
                 return cp;
@@ -47,12 +47,12 @@ namespace Vrc
         
         protected override void OnPaint(PaintEventArgs e)
         {
-            using (var b = new SolidBrush(Color.FromArgb(202, Color.FromArgb(255, 62, 73, 33))))
+            using (SolidBrush b = new SolidBrush(Color.FromArgb(202, Color.FromArgb(255, 62, 73, 33))))
             {
                 e.Graphics.FillRectangle(b, ClientRectangle);
             }
             
-            using (var p = new Pen(Color.Black, 1))
+            using (Pen p = new Pen(Color.Black, 1))
             {
                 // Výpočet souřadnic pro jednotlivé hrany
                 int x = ClientRectangle.X + 1;

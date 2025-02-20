@@ -42,13 +42,13 @@ public class CustomCheckBox : CheckBox
         Rectangle checkRect = this.GetScaledCheckRect();
 
         // Vykreslení pozadí checkboxu - použijeme hover barvu pokud je myš nad kontrolem
-        using (var brush = new SolidBrush(isHovered ? hoverColor : normalColor))
+        using (SolidBrush brush = new SolidBrush(isHovered ? hoverColor : normalColor))
         {
             e.Graphics.FillRectangle(brush, checkRect);
         }
 
         // Vykreslení ohraničení
-        using (var pen = new Pen(Color.Black, 1))
+        using (Pen pen = new Pen(Color.Black, 1))
         {
             e.Graphics.DrawRectangle(pen, checkRect);
         }
@@ -56,7 +56,7 @@ public class CustomCheckBox : CheckBox
         // Pokud je zaškrtnuto, vykreslíme X
         if (this.Checked)
         {
-            using (var pen = new Pen(Color.Black, 1.5f))
+            using (Pen pen = new Pen(Color.Black, 1.5f))
             {
                 // První čára X
                 e.Graphics.DrawLine(pen,
