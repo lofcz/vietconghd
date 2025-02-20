@@ -23,29 +23,29 @@ namespace Vrc
         /// <summary>
         /// 3.cbf
         /// </summary>
-        public ulong Disso { get; set; } = 103;
+        public long Disso { get; set; } = 103;
         /// <summary>
         /// 4.cbf
         /// </summary>
-        public ulong Distra { get; set; } = 130060386;
+        public long Distra { get; set; } = 130060386;
         /// <summary>
         /// 3.cbf
         /// </summary>
-        public ulong Enso { get; set; } = 10080368;
+        public long Enso { get; set; } = 10080368;
         /// <summary>
         /// 4.cbf
         /// </summary>
-        public ulong Entra { get; set; } = 134767500;
+        public long Entra { get; set; } = 134767500;
         /// <summary>
         /// 4.cbf
         /// </summary>
-        public ulong Ranked { get; set; } = 344468;
+        public long Ranked { get; set; } = 344468;
     }
 
     class ActiveRadhash
     {
-        public ulong Cbf3 { get; set; }
-        public ulong Cbf4 { get; set; }
+        public long Cbf3 { get; set; }
+        public long Cbf4 { get; set; }
     }
     
     public class QualityItem
@@ -230,8 +230,8 @@ namespace Vrc
                     return;
                 }
                 
-                using FileStream fs = new FileStream(file, FileMode.Open);
-                ulong hash = XXHash3.Hash64(fs);
+                FileInfo info = new FileInfo(file);
+                long hash = info.Length;
 
                 if (file is "3.cbf")
                 {
@@ -244,14 +244,14 @@ namespace Vrc
             });
 
             DisableImprovedSounds.Checked = active.Cbf3 != radhash.Enso;
-
+            
             if (active.Cbf4 == radhash.Ranked)
             {
                 RankedMultiplayer.Checked = true;
                 DisableTransVegetation.Checked = true;
                 DisableTransVegetation.Enabled = false;
             }
-            else if (active.Cbf4 == radhash.Enso)
+            else if (active.Cbf4 == radhash.Entra)
             {
                 RankedMultiplayer.Checked = false;
                 DisableTransVegetation.Checked = true;
