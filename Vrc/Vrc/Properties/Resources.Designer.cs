@@ -60,6 +60,24 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enhanced audio cannot be activated because your version of Vietcong Remastered does not contain the necessary files. Please update to the latest version..
+        /// </summary>
+        internal static string AudioError1 {
+            get {
+                return ResourceManager.GetString("AudioError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The settings for the enhanced sounds could not be saved: {0}.
+        /// </summary>
+        internal static string AudioErrorGeneric {
+            get {
+                return ResourceManager.GetString("AudioErrorGeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap cc894e4b_cac2_4ff2_8327_4b787907d956 {
@@ -86,6 +104,159 @@ namespace Vrc.Properties {
             get {
                 object obj = ResourceManager.GetObject("fontItalics", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Help cannot be displayed because the navod.pdf file is missing.
+        /// </summary>
+        internal static string HelpError {
+            get {
+                return ResourceManager.GetString("HelpError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The settings of the rated game could not be saved because the file /files/ranked/4.cbf does not exist.
+        /// </summary>
+        internal static string RankedError1 {
+            get {
+                return ResourceManager.GetString("RankedError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The settings of the rated game could not be saved because the file /files/entra/4.cbf does not exist.
+        /// </summary>
+        internal static string RankedError2 {
+            get {
+                return ResourceManager.GetString("RankedError2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The settings of the rated game could not be saved: {0}.
+        /// </summary>
+        internal static string RankedErrorgeneric {
+            get {
+                return ResourceManager.GetString("RankedErrorgeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vietcong Remastered contains a ReShade.ini file that was not found. Place vietcong_remastered.exe in the folder containing vietcong.exe and ReShade.ini.
+        /// </summary>
+        internal static string ReShadeError1 {
+            get {
+                return ResourceManager.GetString("ReShadeError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Put Vietcong Remastered Launcher in the folder where vietcong.exe is located.
+        /// </summary>
+        internal static string ReShadeError2 {
+            get {
+                return ResourceManager.GetString("ReShadeError2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An unexpected error occurred while parsing ReShade.ini: {0}.
+        /// </summary>
+        internal static string ReShadeErrorGeneric {
+            get {
+                return ResourceManager.GetString("ReShadeErrorGeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings could not be saved, ReShade.ini does not exist.
+        /// </summary>
+        internal static string SettingsError1 {
+            get {
+                return ResourceManager.GetString("SettingsError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The settings could not be saved: {0}.
+        /// </summary>
+        internal static string SettingsErrorGeneric {
+            get {
+                return ResourceManager.GetString("SettingsErrorGeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Synchronizing with the game configuration, a moment of patience....
+        /// </summary>
+        internal static string UiSynchronizing {
+            get {
+                return ResourceManager.GetString("UiSynchronizing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enhanced vegetation settings could not be saved because the /files/entra/4.cbf file does not exist.
+        /// </summary>
+        internal static string VegetationError1 {
+            get {
+                return ResourceManager.GetString("VegetationError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enhanced vegetation settings could not be saved because the /files/distra/4.cbf file does not exist.
+        /// </summary>
+        internal static string VegetationError2 {
+            get {
+                return ResourceManager.GetString("VegetationError2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enhanced vegetation settings could not be saved: {0}.
+        /// </summary>
+        internal static string VegetationErrorGeneric {
+            get {
+                return ResourceManager.GetString("VegetationErrorGeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The game cannot be started because the vietcong.exe file does not exist.
+        /// </summary>
+        internal static string VietcongExeMissing {
+            get {
+                return ResourceManager.GetString("VietcongExeMissing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enhanced weapon sound settings could not be saved because there is no /files/disso/3.cbf file.
+        /// </summary>
+        internal static string WeaponsAudioError1 {
+            get {
+                return ResourceManager.GetString("WeaponsAudioError1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The settings for the enhanced weapon sounds could not be saved because the /files/enso/3.cbf file does not exist.
+        /// </summary>
+        internal static string WeaponsAudioError2 {
+            get {
+                return ResourceManager.GetString("WeaponsAudioError2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The settings for the enhanced weapon sounds could not be saved: {0}.
+        /// </summary>
+        internal static string WeaponsAudioErrorGeneric {
+            get {
+                return ResourceManager.GetString("WeaponsAudioErrorGeneric", resourceCulture);
             }
         }
     }

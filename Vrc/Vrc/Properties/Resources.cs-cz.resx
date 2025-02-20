@@ -1,0 +1,71 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="VietcongExeMissing" xml:space="preserve">
+        <value>Hru není možné spustit, protože soubor vietcong.exe neexistuje</value>
+    </data>
+    <data name="AudioError1" xml:space="preserve">
+        <value>Vylepšené audio není možné aktivovat, protože vaše verze Vietcong Remastered neobsahuje potřebné soubory. Aktualizujte na poslední verzi.</value>
+    </data>
+    <data name="AudioErrorGeneric" xml:space="preserve">
+        <value>Nastavení vylepšených zvuků se nepodařilo uložit: {0}</value>
+    </data>
+    <data name="VegetationError1" xml:space="preserve">
+        <value>Nastavení vylepšené vegetace se nepodařilo uložit, protože neexistuje soubor /files/entra/4.cbf</value>
+    </data>
+    <data name="VegetationError2" xml:space="preserve">
+        <value>Nastavení vylepšené vegetace se nepodařilo uložit, protože neexistuje soubor /files/distra/4.cbf</value>
+    </data>
+    <data name="VegetationErrorGeneric" xml:space="preserve">
+        <value>Nastavení vylepšené vegetace se nepodařilo uložit: {0}</value>
+    </data>
+    <data name="WeaponsAudioError1" xml:space="preserve">
+        <value>Nastavení vylepšených zvuků zbraní se nepodařilo uložit, protože neexistuje soubor /files/disso/3.cbf</value>
+    </data>
+    <data name="WeaponsAudioError2" xml:space="preserve">
+        <value>Nastavení vylepšených zvuků zbraní se nepodařilo uložit, protože neexistuje soubor /files/enso/3.cbf</value>
+    </data>
+    <data name="WeaponsAudioErrorGeneric" xml:space="preserve">
+        <value>Nastavení vylepšených zvuků zbraní se nepodařilo uložit: {0}</value>
+    </data>
+    <data name="RankedError1" xml:space="preserve">
+        <value>Nastavení hodnocené hry se nepodařilo uložit, protože neexistuje soubor /files/ranked/4.cbf</value>
+    </data>
+    <data name="RankedError2" xml:space="preserve">
+        <value>Nastavení hodnocené hry se nepodařilo uložit, protože neexistuje soubor /files/entra/4.cbf</value>
+    </data>
+    <data name="RankedErrorgeneric" xml:space="preserve">
+        <value>Nastavení hodnocené hry se nepodařilo uložit: {0}</value>
+    </data>
+    <data name="HelpError" xml:space="preserve">
+        <value>Nápovědu není možné zobrazit, protože chybí soubor navod.pdf</value>
+    </data>
+    <data name="ReShadeErrorGeneric" xml:space="preserve">
+        <value>Během parsování ReShade.ini nastala neočekávaná chyba: {0}</value>
+    </data>
+    <data name="ReShadeError1" xml:space="preserve">
+        <value>Vietcong Remastered obsahuje soubor ReShade.ini, který nebyl nalezen. Umístěte vietcong_remastered.exe do složky, ve které je vietcong.exe a ReShade.ini</value>
+    </data>
+    <data name="ReShadeError2" xml:space="preserve">
+        <value>Vietcong Remastered Launcher vložte do složky, ve které je vietcong.exe</value>
+    </data>
+    <data name="SettingsErrorGeneric" xml:space="preserve">
+        <value>Nastavení se nepodařilo uložit: {0}</value>
+    </data>
+    <data name="SettingsError1" xml:space="preserve">
+        <value>Nastavení se nepodařilo uložit, ReShade.ini neexistuje</value>
+    </data>
+    <data name="UiSynchronizing" xml:space="preserve">
+        <value>Probíhá synchronizace s konfigurací hry, okamžik strpení..</value>
+    </data>
+</root>

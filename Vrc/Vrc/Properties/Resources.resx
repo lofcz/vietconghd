@@ -127,4 +127,61 @@
   <data name="fontItalics" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fontItalics.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="VietcongExeMissing" xml:space="preserve">
+    <value>The game cannot be started because the vietcong.exe file does not exist</value>
+  </data>
+  <data name="AudioError1" xml:space="preserve">
+    <value>Enhanced audio cannot be activated because your version of Vietcong Remastered does not contain the necessary files. Please update to the latest version.</value>
+  </data>
+  <data name="AudioErrorGeneric" xml:space="preserve">
+    <value>The settings for the enhanced sounds could not be saved: {0}</value>
+  </data>
+  <data name="VegetationError1" xml:space="preserve">
+    <value>Enhanced vegetation settings could not be saved because the /files/entra/4.cbf file does not exist</value>
+  </data>
+  <data name="VegetationError2" xml:space="preserve">
+    <value>Enhanced vegetation settings could not be saved because the /files/distra/4.cbf file does not exist</value>
+  </data>
+  <data name="VegetationErrorGeneric" xml:space="preserve">
+    <value>Enhanced vegetation settings could not be saved: {0}</value>
+  </data>
+  <data name="WeaponsAudioError1" xml:space="preserve">
+    <value>Enhanced weapon sound settings could not be saved because there is no /files/disso/3.cbf file</value>
+  </data>
+  <data name="WeaponsAudioError2" xml:space="preserve">
+    <value>The settings for the enhanced weapon sounds could not be saved because the /files/enso/3.cbf file does not exist</value>
+  </data>
+  <data name="WeaponsAudioErrorGeneric" xml:space="preserve">
+    <value>The settings for the enhanced weapon sounds could not be saved: {0}</value>
+  </data>
+  <data name="RankedError1" xml:space="preserve">
+    <value>The settings of the rated game could not be saved because the file /files/ranked/4.cbf does not exist</value>
+  </data>
+  <data name="RankedError2" xml:space="preserve">
+    <value>The settings of the rated game could not be saved because the file /files/entra/4.cbf does not exist</value>
+  </data>
+  <data name="RankedErrorgeneric" xml:space="preserve">
+    <value>The settings of the rated game could not be saved: {0}</value>
+  </data>
+  <data name="HelpError" xml:space="preserve">
+    <value>Help cannot be displayed because the navod.pdf file is missing</value>
+  </data>
+  <data name="ReShadeErrorGeneric" xml:space="preserve">
+    <value>An unexpected error occurred while parsing ReShade.ini: {0}</value>
+  </data>
+  <data name="ReShadeError1" xml:space="preserve">
+    <value>Vietcong Remastered contains a ReShade.ini file that was not found. Place vietcong_remastered.exe in the folder containing vietcong.exe and ReShade.ini</value>
+  </data>
+  <data name="ReShadeError2" xml:space="preserve">
+    <value>Put Vietcong Remastered Launcher in the folder where vietcong.exe is located</value>
+  </data>
+  <data name="SettingsErrorGeneric" xml:space="preserve">
+    <value>The settings could not be saved: {0}</value>
+  </data>
+  <data name="SettingsError1" xml:space="preserve">
+    <value>Settings could not be saved, ReShade.ini does not exist</value>
+  </data>
+  <data name="UiSynchronizing" xml:space="preserve">
+    <value>Synchronizing with the game configuration, a moment of patience...</value>
+  </data>
 </root>

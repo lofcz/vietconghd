@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Form1_PlayFistAlpha_Click_Hru_není_možné_spustit__protože_soubor_vietcong_exe_neexistuje" xml:space="preserve">
+    <value>Hru není možné spustit, protože soubor vietcong.exe neexistuje</value>
+  </data>
 </root>

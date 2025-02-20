@@ -115,8 +115,14 @@
         <Compile Include="ThirdParty\Xxhash\XXHash.cs" />
         <Compile Include="ThirdParty\Xxhash\Xxhash3.cs" />
         <Compile Include="VrcCfg.cs" />
+        <EmbeddedResource Include="Form1.cs-cz.resx">
+          <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Properties\Resources.cs-cz.resx">
+          <DependentUpon>Resources.resx</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>

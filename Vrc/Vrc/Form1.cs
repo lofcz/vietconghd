@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Flurl.Http;
 using Newtonsoft.Json;
+using Vrc.Properties;
 using Exception = System.Exception;
 
 namespace Vrc
@@ -106,7 +107,7 @@ namespace Vrc
         {
             InitializeComponent();
 
-            StatusLabel.Text = "Probíhá synchronizace s konfigurací hry, okamžik strpení..";
+            StatusLabel.Text = Resources.UiSynchronizing;
             StatusLabel.Invalidate();
 
             /*var info1 = new FileInfo("files\\disso\\3.cbf");
@@ -275,7 +276,7 @@ namespace Vrc
         {
             if (!File.Exists("ReShade.ini"))
             {
-                MessageBox.Show("Nastavení se nepodařilo uložit, ReShade.ini neexistuje");
+                MessageBox.Show(Resources.SettingsError1);
                 return new Exception("ReShade.ini neexistuje"); 
             }
             
@@ -290,7 +291,7 @@ namespace Vrc
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Nastavení se nepodařilo uložit: {e.Message}");
+                MessageBox.Show(string.Format(Resources.SettingsErrorGeneric, e.Message));
                 return e;
             }
         }
@@ -314,14 +315,14 @@ namespace Vrc
 
             if (!File.Exists("vietcong.exe"))
             {
-                MessageBox.Show("Vietcong Remastered Launcher vložte do složky, ve které je vietcong.exe");
+                MessageBox.Show(Resources.ReShadeError2);
                 Close();
                 return;
             }
 
             if (!File.Exists("ReShade.ini"))
             {
-                MessageBox.Show("Vietcong Remastered obsahuje soubor ReShade.ini, který nebyl nalezen. Umístěte vietcong_remastered.exe do složky, ve které je vietcong.exe a ReShade.ini");
+                MessageBox.Show(Resources.ReShadeError1);
                 Close();
                 return;
             }
@@ -370,7 +371,7 @@ namespace Vrc
             }
             catch (Exception e)
             {
-                MessageBox.Show($"Během parsování ReShade.ini nastala neočekávaná chyba: {e.Message}");
+                MessageBox.Show(string.Format(Resources.ReShadeErrorGeneric, e.Message));
                 Close();
                 return;
             }
@@ -456,7 +457,7 @@ namespace Vrc
         {
             if (!File.Exists("vietcong.exe"))
             {
-                MessageBox.Show("Hru není možné spustit, protože soubor vietcong.exe neexistuje");
+                MessageBox.Show(Resources.VietcongExeMissing);
                 return;
             }
 
@@ -475,7 +476,7 @@ namespace Vrc
         {
             if (!File.Exists("vietcong.exe"))
             {
-                MessageBox.Show("Hru není možné spustit, protože soubor vietcong.exe neexistuje");
+                MessageBox.Show(Resources.VietcongExeMissing);
                 return;
             }
 
@@ -533,7 +534,7 @@ namespace Vrc
                 {
                     if (!Directory.Exists("files/sfx") || !File.Exists("files/sfx/dsound.dll") || !File.Exists("files/sfx/dsoal-aldrv.dll") || !File.Exists("files/sfx/alsoft.ini"))
                     {
-                        MessageBox.Show("Vylepšené audio není možné aktivovat, protože vaše verze Vietcong Remastered neobsahuje potřebné soubory. Aktualizujte na poslední verzi.");
+                        MessageBox.Show(Resources.AudioError1);
                         ImprovedSoundCheck.Checked = false;
                         return;
                     }
@@ -562,7 +563,7 @@ namespace Vrc
             }
             catch (Exception e2)
             {
-                MessageBox.Show($"Nastavení vylepšených zvuků se nepodařilo uložit: {e2.Message}");
+                MessageBox.Show(string.Format(Resources.AudioErrorGeneric, e2.Message));
             }
         }
 
@@ -583,7 +584,7 @@ namespace Vrc
                     }
                     else
                     {
-                        MessageBox.Show($"Nastavení vylepšené vegetace se nepodařilo uložit, protože neexistuje soubor /files/entra/4.cbf");
+                        MessageBox.Show(Resources.VegetationError1);
                     }
                 }
                 else
@@ -594,13 +595,13 @@ namespace Vrc
                     }
                     else
                     {
-                        MessageBox.Show($"Nastavení vylepšené vegetace se nepodařilo uložit, protože neexistuje soubor /files/distra/4.cbf");
+                        MessageBox.Show(Resources.VegetationError2);
                     }
                 }
             }
             catch (Exception e2)
             {
-                MessageBox.Show($"Nastavení vylepšené vegetace se nepodařilo uložit: {e2.Message}");
+                MessageBox.Show(string.Format(Resources.AudioErrorGeneric, e2.Message));
             }
         }
 
@@ -621,7 +622,7 @@ namespace Vrc
                     }
                     else
                     {
-                        MessageBox.Show($"Nastavení vylepšených zvuků zbraní se nepodařilo uložit, protože neexistuje soubor /files/disso/3.cbf");
+                        MessageBox.Show(Resources.WeaponsAudioError1);
                     }
                 }
                 else
@@ -632,13 +633,13 @@ namespace Vrc
                     }
                     else
                     {
-                        MessageBox.Show($"Nastavení vylepšených zvuků zbraní se nepodařilo uložit, protože neexistuje soubor /files/enso/3.cbf");
+                        MessageBox.Show(Resources.WeaponsAudioError2);
                     }
                 }
             }
             catch (Exception e2)
             {
-                MessageBox.Show($"Nastavení vylepšených zvuků zbraní se nepodařilo uložit: {e2.Message}");
+                MessageBox.Show(string.Format(Resources.WeaponsAudioErrorGeneric, e2.Message));
             }
         }
         
@@ -658,7 +659,7 @@ namespace Vrc
                     }
                     else
                     {
-                        MessageBox.Show($"Nastavení hodnocené hry se nepodařilo uložit, protože neexistuje soubor /files/ranked/4.cbf");
+                        MessageBox.Show(Resources.RankedError1);
                     }
                 }
                 else
@@ -673,13 +674,13 @@ namespace Vrc
                     }
                     else
                     {
-                        MessageBox.Show($"Nastavení hodnocené hry se nepodařilo uložit, protože neexistuje soubor /files/entra/4.cbf");
+                        MessageBox.Show(Resources.RankedError2);
                     }
                 }
             }
             catch (Exception e2)
             {
-                MessageBox.Show($"Nastavení hodnocené hry se nepodařilo uložit: {e2.Message}");
+                MessageBox.Show(string.Format(Resources.RankedErrorgeneric, e2.Message));
             }
         }
 
@@ -709,7 +710,7 @@ namespace Vrc
                 return;
             }
 
-            MessageBox.Show("Nápovědu není možné zobrazit, protože chybí soubor navod.pdf");
+            MessageBox.Show(Resources.HelpError);
         }
     }
 }
