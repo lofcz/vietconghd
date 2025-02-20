@@ -237,6 +237,7 @@ namespace Vrc
             this.DisableImprovedSounds.TabIndex = 4;
             this.DisableImprovedSounds.Text = "Disable improved weapon sounds";
             this.DisableImprovedSounds.UseVisualStyleBackColor = true;
+            this.DisableImprovedSounds.CheckedChanged += new System.EventHandler(this.DisableImprovedSounds_CheckedChanged);
             // 
             // DisableTransVegetation
             // 

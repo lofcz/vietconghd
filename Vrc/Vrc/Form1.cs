@@ -68,18 +68,6 @@ namespace Vrc
     
     public partial class Form1 : Form
     {
-        public static Task InvokeAsync(Control control, Action action)
-        {
-            if (control.InvokeRequired)
-            {
-                return Task.Factory.FromAsync(
-                    control.BeginInvoke(action),
-                    control.EndInvoke);
-            }
-            action();
-            return Task.CompletedTask;
-        }
-        
         private const int WM_NCHITTEST = 0x84;
         private const int HTCLIENT = 0x1;
         private const int HTCAPTION = 0x2;
@@ -243,8 +231,16 @@ namespace Vrc
                 }
             });
 
-            DisableImprovedSounds.Checked = active.Cbf3 != radhash.Enso;
+            if (active.Cbf3 == radhash.Disso)
+            {
+                DisableImprovedSounds.Checked = true;
+            }
+            else if (active.Cbf3 == radhash.Enso || true)
+            {
+                DisableImprovedSounds.Checked = false;
+            }
             
+    
             if (active.Cbf4 == radhash.Ranked)
             {
                 RankedMultiplayer.Checked = true;
@@ -262,7 +258,11 @@ namespace Vrc
                 DisableTransVegetation.Checked = false;
             }
 
-            await InvokeAsync(this, () =>
+            DisableTransVegetation.Invalidate();
+            RankedMultiplayer.Invalidate();
+            DisableImprovedSounds.Invalidate();
+
+            Invoke(() =>
             {
                 StatusLabel.Text = string.Empty;
                 StatusLabel.Invalidate();
@@ -573,6 +573,44 @@ namespace Vrc
             catch (Exception e2)
             {
                 MessageBox.Show($"Nastavení vylepšené vegetace se nepodařilo uložit: {e2.Message}");
+            }
+        }
+
+        private void DisableImprovedSounds_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!ready)
+            {
+                return;
+            }
+
+            try
+            {
+                if (DisableImprovedSounds.Checked)
+                {
+                    if (File.Exists("files/disso/3.cbf"))
+                    {
+                        File.Copy("files/disso/3.cbf", "3.cbf", true);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Nastavení vylepšených zvuků zbraní se nepodařilo uložit, protože neexistuje soubor /files/disso/3.cbf");
+                    }
+                }
+                else
+                {
+                    if (File.Exists("files/enso/3.cbf"))
+                    {
+                        File.Copy("files/enso/3.cbf", "3.cbf", true);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Nastavení vylepšených zvuků zbraní se nepodařilo uložit, protože neexistuje soubor /files/enso/3.cbf");
+                    }
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show($"Nastavení vylepšených zvuků zbraní se nepodařilo uložit: {e2.Message}");
             }
         }
     }
