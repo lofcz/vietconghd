@@ -75,6 +75,22 @@ namespace Vrc
         {
             InitializeComponent();
 
+            /*using FileStream fs = new FileStream("files\\disso\\3.cbf", FileMode.Open);
+            ulong hash1 = XXHash3.Hash64(fs);
+            
+            using FileStream fs2 = new FileStream("files\\distra\\4.cbf", FileMode.Open);
+            ulong hash2 = XXHash3.Hash64(fs2);
+
+            using FileStream fs3 = new FileStream("files\\enso\\3.cbf", FileMode.Open);
+            ulong hash3 = XXHash3.Hash64(fs3);
+
+            using FileStream fs4 = new FileStream("files\\entra\\4.cbf", FileMode.Open);
+            ulong hash4 = XXHash3.Hash64(fs4);
+
+            using FileStream fs5 = new FileStream("files\\ranked\\4.cbf", FileMode.Open);
+            ulong hash5 = XXHash3.Hash64(fs5);*/
+
+            
             FormBorderStyle = FormBorderStyle.None;
 
             mainPanel.Parent = bgPicture;
