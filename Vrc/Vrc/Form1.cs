@@ -12,11 +12,42 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Flurl.Http;
 using Newtonsoft.Json;
 using Exception = System.Exception;
 
 namespace Vrc
 {
+    class Radhash
+    {
+        /// <summary>
+        /// 3.cbf
+        /// </summary>
+        public ulong Disso { get; set; } = 17103328593693516090;
+        /// <summary>
+        /// 4.cbf
+        /// </summary>
+        public ulong Distra { get; set; } = 9561496664274228725;
+        /// <summary>
+        /// 3.cbf
+        /// </summary>
+        public ulong Enso { get; set; } = 10429368783072318818;
+        /// <summary>
+        /// 4.cbf
+        /// </summary>
+        public ulong Entra { get; set; } = 2059262151280239165;
+        /// <summary>
+        /// 4.cbf
+        /// </summary>
+        public ulong Ranked { get; set; } = 14212456902882225252;
+    }
+
+    class ActiveRadhash
+    {
+        public ulong Cbf3 { get; set; }
+        public ulong Cbf4 { get; set; }
+    }
+    
     public class QualityItem
     {
         public string Text { get; set; }
@@ -75,6 +106,9 @@ namespace Vrc
         {
             InitializeComponent();
 
+            StatusLabel.Text = "Probíhá synchronizace s konfigurací hry, okamžik strpení..";
+            StatusLabel.Invalidate();
+            
             /*using FileStream fs = new FileStream("files\\disso\\3.cbf", FileMode.Open);
             ulong hash1 = XXHash3.Hash64(fs);
             
@@ -142,6 +176,7 @@ namespace Vrc
             DisableImprovedSounds.Font = checksFont;
             RankedMultiplayer.Font = checksFont;
             ExitCheckbox.Font = checksFont;
+            StatusLabel.Font = labelsFont;
 
             PlayClassicButton.Font = labelsFont;
             PlayFistAlpha.Font = labelsFont;
@@ -149,8 +184,80 @@ namespace Vrc
 
             PlayLabel.Font = playFont;
             
+            
+            
             TryFindGame();
-            ready = true;
+            _ = GetHashes();
+        }
+
+        async Task GetHashes()
+        {
+            Radhash radhash = new Radhash();
+            
+            // attempt to fetch current hashes online
+            try
+            {
+                string upstreamRadhash = await "https://raw.githubusercontent.com/lofcz/VietcongRemasteredLauncher/refs/heads/master/Vrc/Vrc/RADHASH.json".GetStringAsync();
+
+                if (upstreamRadhash.Length > 0)
+                {
+                    radhash = JsonConvert.DeserializeObject<Radhash>(upstreamRadhash);
+                }
+            }
+            catch (Exception e)
+            {
+                
+            }
+            
+            List<string> filesToHash = ["3.cbf", "4.cbf"];
+            ActiveRadhash active = new ActiveRadhash();
+            
+            Parallel.ForEach(filesToHash, file =>
+            {
+                if (!File.Exists(file))
+                {
+                    return;
+                }
+                
+                using FileStream fs = new FileStream(file, FileMode.Open);
+                ulong hash = XXHash3.Hash64(fs);
+
+                if (file is "3.cbf")
+                {
+                    active.Cbf3 = hash;
+                }
+                else
+                {
+                    active.Cbf4 = hash;
+                }
+            });
+
+            DisableImprovedSounds.Checked = active.Cbf3 != radhash.Enso;
+
+            if (active.Cbf4 == radhash.Ranked)
+            {
+                RankedMultiplayer.Checked = true;
+                DisableTransVegetation.Checked = true;
+                DisableTransVegetation.Enabled = false;
+            }
+            else if (active.Cbf4 == radhash.Enso)
+            {
+                RankedMultiplayer.Checked = false;
+                DisableTransVegetation.Checked = true;
+            }
+            else
+            {
+                RankedMultiplayer.Checked = false;
+                DisableTransVegetation.Checked = false;
+            }
+
+            Invoke(() =>
+            {
+                StatusLabel.Text = string.Empty;
+                StatusLabel.Invalidate();
+                ready = true;
+                Invalidate();
+            });
         }
 
         Exception? TrySetReShadeValue(string section, string key, string value)

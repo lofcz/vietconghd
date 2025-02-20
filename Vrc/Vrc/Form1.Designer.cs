@@ -38,6 +38,7 @@ namespace Vrc
             this.PlayClassicButton = new CustomButton();
             this.HelpButton = new CustomButton();
             this.bottomPanel = new Vrc.CustomPanel();
+            this.StatusLabel = new System.Windows.Forms.Label();
             this.mainPanel = new Vrc.CustomPanel();
             this.PostprocessingQualityLabel = new System.Windows.Forms.Label();
             this.PostprocessingQuality = new CustomComboBox();
@@ -49,6 +50,7 @@ namespace Vrc
             this.ImprovedSoundCheck = new CustomCheckBox();
             this.bgPicture = new Vrc.CustomPictureBox();
             this.rightPanel.SuspendLayout();
+            this.bottomPanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bgPicture)).BeginInit();
             this.SuspendLayout();
@@ -146,11 +148,24 @@ namespace Vrc
             // 
             this.bottomPanel.BackColor = System.Drawing.Color.Transparent;
             this.bottomPanel.BorderPanelStyle = 1;
+            this.bottomPanel.Controls.Add(this.StatusLabel);
             this.bottomPanel.Location = new System.Drawing.Point(0, 406);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Opacity = 50;
             this.bottomPanel.Size = new System.Drawing.Size(585, 35);
             this.bottomPanel.TabIndex = 1;
+            // 
+            // StatusLabel
+            // 
+            this.StatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.StatusLabel.AutoSize = true;
+            this.StatusLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.StatusLabel.Location = new System.Drawing.Point(12, 7);
+            this.StatusLabel.Name = "StatusLabel";
+            this.StatusLabel.Size = new System.Drawing.Size(95, 17);
+            this.StatusLabel.TabIndex = 10;
+            this.StatusLabel.Text = "STATUS BAR";
+            this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // mainPanel
             // 
@@ -307,11 +322,15 @@ namespace Vrc
             this.Text = "Form1";
             this.rightPanel.ResumeLayout(false);
             this.rightPanel.PerformLayout();
+            this.bottomPanel.ResumeLayout(false);
+            this.bottomPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bgPicture)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private System.Windows.Forms.Label StatusLabel;
 
         private CustomCheckBox ExitCheckbox;
 
