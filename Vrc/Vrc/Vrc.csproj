@@ -76,6 +76,7 @@
         <Compile Include="ThirdParty\Ini\IniEnumerationFailedException.cs" />
         <Compile Include="ThirdParty\Ini\IniFileEmptyException.cs" />
         <Compile Include="ThirdParty\Ini\IniParser.cs" />
+        <Compile Include="VrcCfg.cs" />
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
         </EmbeddedResource>

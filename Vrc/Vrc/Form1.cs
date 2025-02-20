@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
@@ -10,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 namespace Vrc
 {
@@ -22,6 +25,11 @@ namespace Vrc
         private Font playFont;
         private Font labelsFont;
         private Font checksFont;
+        
+        // we need to hold on this and prevent GC from collecting it
+        PrivateFontCollection pfc = new PrivateFontCollection();
+
+        private VrcCfg cfg = new VrcCfg();
 
         protected override void WndProc(ref Message message)
         {
@@ -87,20 +95,30 @@ namespace Vrc
 
         void TryFindGame()
         {
-            if (!File.Exists("vrc.json"))
+            try
             {
-                File.WriteAllText("vrc.json", "{}");
+                if (!File.Exists("vrc.json"))
+                {
+                    File.WriteAllText("vrc.json", "{}");
+                }
+                
+                string data = File.ReadAllText("vrc.json");
+                cfg = JsonConvert.DeserializeObject<VrcCfg>(data);
+            }
+            catch (Exception e)
+            {
+                
             }
 
-            string data = File.ReadAllText("vrc.json");
-            
-            
+            if (!File.Exists("vietcong.exe"))
+            {
+                MessageBox.Show("Vietcong Remastered Launcher vložte do složky, ve které je vietcong.exe");
+                Close();
+            }
         }
-
+        
         void InitFonts()
         {
-            PrivateFontCollection pfc = new PrivateFontCollection();
-
             //Select your font from the resources.
             //My font here is "Digireu.ttf"
             byte[] font = Properties.Resources.fontItalics;
