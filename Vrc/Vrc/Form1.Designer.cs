@@ -273,6 +273,7 @@ namespace Vrc
             this.ImprovedSoundCheck.TabIndex = 0;
             this.ImprovedSoundCheck.Text = "Improved 3D Sound";
             this.ImprovedSoundCheck.UseVisualStyleBackColor = true;
+            this.ImprovedSoundCheck.CheckedChanged += new System.EventHandler(this.ImprovedSoundCheck_CheckedChanged);
             // 
             // bgPicture
             // 

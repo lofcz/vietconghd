@@ -240,6 +240,12 @@ namespace Vrc
                 Close();
                 return;
             }
+
+            if (File.Exists("dsound.dll"))
+            {
+                ImprovedSoundCheck.Checked = true;
+            }
+            
         }
         
         void InitFonts()
@@ -350,6 +356,52 @@ namespace Vrc
             }
             
             TrySetReShadeValue("APP", "ForceVsync", ForceVsync.Checked ? "1" : "0");
+        }
+
+        private void ImprovedSoundCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!ready)
+            {
+                return;
+            }
+
+            try
+            {
+                if (ImprovedSoundCheck.Checked)
+                {
+                    if (!Directory.Exists("files/sfx") || !File.Exists("files/sfx/dsound.dll") || !File.Exists("files/sfx/dsoal-aldrv.dll") || !File.Exists("files/sfx/alsoft.ini"))
+                    {
+                        MessageBox.Show("Vylepšené audio není možné aktivovat, protože vaše verze Vietcong Remastered neobsahuje potřebné soubory. Aktualizujte na poslední verzi.");
+                        ImprovedSoundCheck.Checked = false;
+                        return;
+                    }
+
+                    File.Copy("files/sfx/dsound.dll", "dsound.dll");
+                    File.Copy("files/sfx/dsoal-aldrv.dll", "dsoal-aldrv.dll");
+                    File.Copy("files/sfx/alsoft.ini", "alsoft.ini");
+                }
+                else
+                {
+                    if (File.Exists("dsound.dll"))
+                    {
+                        File.Delete("dsound.dll");
+                    }
+
+                    if (File.Exists("dsoal-aldrv.dll"))
+                    {
+                        File.Delete("dsoal-aldrv.dll");
+                    }
+
+                    if (File.Exists("alsoft.ini"))
+                    {
+                        File.Delete("alsoft.ini");
+                    }
+                }
+            }
+            catch (Exception e2)
+            {
+                MessageBox.Show($"Nastavení vylepšených zvuků se nepodařilo uložit: {e2.Message}");
+            }
         }
     }
 }
