@@ -32,6 +32,8 @@ namespace Vrc
         private void InitializeComponent()
         {
             this.rightPanel = new Vrc.GlassyPanel();
+            this.ExitCheckbox = new CustomCheckBox();
+            this.PlayLabel = new System.Windows.Forms.Label();
             this.PlayFistAlpha = new CustomButton();
             this.PlayClassicButton = new CustomButton();
             this.HelpButton = new CustomButton();
@@ -55,22 +57,54 @@ namespace Vrc
             // 
             this.rightPanel.BackColor = System.Drawing.Color.Transparent;
             this.rightPanel.BorderPanelStyle = 2;
+            this.rightPanel.Controls.Add(this.ExitCheckbox);
+            this.rightPanel.Controls.Add(this.PlayLabel);
             this.rightPanel.Controls.Add(this.PlayFistAlpha);
             this.rightPanel.Controls.Add(this.PlayClassicButton);
             this.rightPanel.Controls.Add(this.HelpButton);
-            this.rightPanel.Location = new System.Drawing.Point(584, 0);
+            this.rightPanel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.rightPanel.Location = new System.Drawing.Point(583, 0);
             this.rightPanel.Name = "rightPanel";
             this.rightPanel.Opacity = 50;
-            this.rightPanel.Size = new System.Drawing.Size(216, 442);
+            this.rightPanel.Size = new System.Drawing.Size(216, 441);
             this.rightPanel.TabIndex = 0;
+            // 
+            // ExitCheckbox
+            // 
+            this.ExitCheckbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ExitCheckbox.AutoSize = true;
+            this.ExitCheckbox.CheckAlign = System.Drawing.ContentAlignment.TopRight;
+            this.ExitCheckbox.Checked = true;
+            this.ExitCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ExitCheckbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ExitCheckbox.Location = new System.Drawing.Point(152, 12);
+            this.ExitCheckbox.Name = "ExitCheckbox";
+            this.ExitCheckbox.Size = new System.Drawing.Size(52, 21);
+            this.ExitCheckbox.TabIndex = 9;
+            this.ExitCheckbox.Text = "Exit";
+            this.ExitCheckbox.UseVisualStyleBackColor = true;
+            this.ExitCheckbox.CheckedChanged += new System.EventHandler(this.ExitCheckbox_CheckedChanged);
+            // 
+            // PlayLabel
+            // 
+            this.PlayLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PlayLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.PlayLabel.Location = new System.Drawing.Point(13, 310);
+            this.PlayLabel.Name = "PlayLabel";
+            this.PlayLabel.Size = new System.Drawing.Size(192, 23);
+            this.PlayLabel.TabIndex = 9;
+            this.PlayLabel.Text = "Play";
+            this.PlayLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PlayLabel.Click += new System.EventHandler(this.PlayLabel_Click);
             // 
             // PlayFistAlpha
             // 
             this.PlayFistAlpha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(160)))), ((int)(((byte)(89)))));
+            this.PlayFistAlpha.BorderSize = 2;
             this.PlayFistAlpha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayFistAlpha.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.PlayFistAlpha.ForeColor = System.Drawing.Color.Black;
-            this.PlayFistAlpha.Location = new System.Drawing.Point(13, 369);
+            this.PlayFistAlpha.Location = new System.Drawing.Point(13, 390);
             this.PlayFistAlpha.Name = "PlayFistAlpha";
             this.PlayFistAlpha.Size = new System.Drawing.Size(192, 40);
             this.PlayFistAlpha.TabIndex = 2;
@@ -80,23 +114,26 @@ namespace Vrc
             // PlayClassicButton
             // 
             this.PlayClassicButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(160)))), ((int)(((byte)(89)))));
+            this.PlayClassicButton.BorderSize = 2;
             this.PlayClassicButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlayClassicButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.PlayClassicButton.ForeColor = System.Drawing.Color.Black;
-            this.PlayClassicButton.Location = new System.Drawing.Point(13, 323);
+            this.PlayClassicButton.Location = new System.Drawing.Point(13, 343);
             this.PlayClassicButton.Name = "PlayClassicButton";
             this.PlayClassicButton.Size = new System.Drawing.Size(192, 40);
             this.PlayClassicButton.TabIndex = 1;
             this.PlayClassicButton.Text = "Vietcong Classic";
             this.PlayClassicButton.UseVisualStyleBackColor = true;
+            this.PlayClassicButton.Click += new System.EventHandler(this.PlayClassicButton_Click);
             // 
             // HelpButton
             // 
             this.HelpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(160)))), ((int)(((byte)(89)))));
+            this.HelpButton.BorderSize = 1;
             this.HelpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.HelpButton.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
             this.HelpButton.ForeColor = System.Drawing.Color.Black;
-            this.HelpButton.Location = new System.Drawing.Point(13, 12);
+            this.HelpButton.Location = new System.Drawing.Point(13, 45);
             this.HelpButton.Name = "HelpButton";
             this.HelpButton.Size = new System.Drawing.Size(192, 40);
             this.HelpButton.TabIndex = 0;
@@ -107,7 +144,7 @@ namespace Vrc
             // 
             this.bottomPanel.BackColor = System.Drawing.Color.Transparent;
             this.bottomPanel.BorderPanelStyle = 1;
-            this.bottomPanel.Location = new System.Drawing.Point(0, 407);
+            this.bottomPanel.Location = new System.Drawing.Point(0, 406);
             this.bottomPanel.Name = "bottomPanel";
             this.bottomPanel.Opacity = 50;
             this.bottomPanel.Size = new System.Drawing.Size(585, 35);
@@ -128,7 +165,7 @@ namespace Vrc
             this.mainPanel.Location = new System.Drawing.Point(0, 89);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Opacity = 50;
-            this.mainPanel.Size = new System.Drawing.Size(585, 320);
+            this.mainPanel.Size = new System.Drawing.Size(585, 317);
             this.mainPanel.TabIndex = 2;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -146,11 +183,16 @@ namespace Vrc
             // PostprocessingQuality
             // 
             this.PostprocessingQuality.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PostprocessingQuality.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(160)))), ((int)(((byte)(89)))));
+            this.PostprocessingQuality.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.PostprocessingQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.PostprocessingQuality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PostprocessingQuality.ForeColor = System.Drawing.Color.Black;
             this.PostprocessingQuality.FormattingEnabled = true;
             this.PostprocessingQuality.Items.AddRange(new object[] { "Extreme", "Ultra", "Very High", "High", "Medium", "Low", "Ultra Low" });
             this.PostprocessingQuality.Location = new System.Drawing.Point(319, 21);
             this.PostprocessingQuality.Name = "PostprocessingQuality";
-            this.PostprocessingQuality.Size = new System.Drawing.Size(150, 24);
+            this.PostprocessingQuality.Size = new System.Drawing.Size(150, 23);
             this.PostprocessingQuality.TabIndex = 7;
             this.PostprocessingQuality.SelectedIndexChanged += new System.EventHandler(this.PostprocessingQuality_SelectedIndexChanged);
             // 
@@ -187,7 +229,7 @@ namespace Vrc
             this.DisableTransVegetation.Location = new System.Drawing.Point(340, 212);
             this.DisableTransVegetation.Name = "DisableTransVegetation";
             this.DisableTransVegetation.Size = new System.Drawing.Size(221, 21);
-            this.DisableTransVegetation.TabIndex = 3;
+            this.DisableTransVegetation.TabIndex = 2;
             this.DisableTransVegetation.Text = "Disable translucent vegetation";
             this.DisableTransVegetation.UseVisualStyleBackColor = true;
             // 
@@ -230,26 +272,28 @@ namespace Vrc
             // 
             // bgPicture
             // 
+            this.bgPicture.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bgPicture.Image = global::Vrc.Properties.Resources.cc894e4b_cac2_4ff2_8327_4b787907d956;
             this.bgPicture.Location = new System.Drawing.Point(0, 0);
             this.bgPicture.Name = "bgPicture";
-            this.bgPicture.Size = new System.Drawing.Size(800, 442);
+            this.bgPicture.Size = new System.Drawing.Size(799, 441);
             this.bgPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.bgPicture.TabIndex = 3;
             this.bgPicture.TabStop = false;
+            this.bgPicture.Click += new System.EventHandler(this.bgPicture_Click);
+            this.bgPicture.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bgPicture_MouseDown);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(801, 443);
+            this.ClientSize = new System.Drawing.Size(799, 441);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.bottomPanel);
             this.Controls.Add(this.rightPanel);
             this.Controls.Add(this.bgPicture);
             this.DoubleBuffered = true;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -257,11 +301,16 @@ namespace Vrc
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.rightPanel.ResumeLayout(false);
+            this.rightPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bgPicture)).EndInit();
             this.ResumeLayout(false);
         }
+
+        private CustomCheckBox ExitCheckbox;
+
+        private System.Windows.Forms.Label PlayLabel;
 
         private System.Windows.Forms.PictureBox bgPicture;
 

@@ -3,17 +3,21 @@ using System.Windows.Forms;
 
 public class CustomButton : Button
 {
+    public int BorderSize { get; set; }
+    
     public CustomButton()
     {
         // Nastavení základních vlastností
         this.FlatStyle = FlatStyle.Flat;
-        this.FlatAppearance.BorderSize = 2;
+        this.FlatAppearance.BorderSize = BorderSize;
         this.FlatAppearance.BorderColor = Color.Black;
         this.BackColor = ColorTranslator.FromHtml("#8da059");
-        
-        // Volitelně můžeme přidat další vlastnosti
-        this.Font = new Font("Arial", 10F, FontStyle.Bold);
-        this.ForeColor = Color.Black;
+    }
+
+    protected override void OnPaint(PaintEventArgs e)
+    {
+        this.FlatAppearance.BorderSize = BorderSize;
+        base.OnPaint(e);
     }
 
     // Pokud chceme zabránit změně některých vlastností za běhu
