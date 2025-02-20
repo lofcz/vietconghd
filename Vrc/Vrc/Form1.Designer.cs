@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using Vrc.Properties;
 
 namespace Vrc
 {
@@ -31,6 +32,7 @@ namespace Vrc
         /// </summary>
         private void InitializeComponent()
         {
+            //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.rightPanel = new Vrc.CustomPanel();
             this.ExitCheckbox = new CustomCheckBox();
             this.PlayLabel = new System.Windows.Forms.Label();
@@ -318,10 +320,10 @@ namespace Vrc
             this.Controls.Add(this.bgPicture);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(Resources.AppIcon));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
-            this.ShowIcon = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vietcong HD Remaster";
             this.rightPanel.ResumeLayout(false);
