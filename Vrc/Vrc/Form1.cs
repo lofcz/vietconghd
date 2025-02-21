@@ -655,9 +655,9 @@ namespace Vrc
             {
                 if (DisableTransVegetation.Checked)
                 {
-                    if (File.Exists("files/entra/4.cbf"))
+                    if (File.Exists("files/distra/4.cbf"))
                     {
-                        File.Copy("files/entra/4.cbf", "4.cbf", true);
+                        File.Copy("files/distra/4.cbf", "4.cbf", true);
                     }
                     else
                     {
@@ -666,9 +666,9 @@ namespace Vrc
                 }
                 else
                 {
-                    if (File.Exists("files/distra/4.cbf"))
+                    if (File.Exists("files/entra/4.cbf"))
                     {
-                        File.Copy("files/distra/4.cbf", "4.cbf", true);
+                        File.Copy("files/entra/4.cbf", "4.cbf", true);
                     }
                     else
                     {
@@ -746,9 +746,9 @@ namespace Vrc
                     DisableTransVegetation.Enabled = true;
                     DisableTransVegetation.Invalidate();
                     
-                    if (File.Exists("files/entra/4.cbf"))
+                    if (File.Exists("files/distra/4.cbf"))
                     {
-                        File.Copy("files/entra/4.cbf", "4.cbf", true);
+                        File.Copy("files/distra/4.cbf", "4.cbf", true);
                     }
                     else
                     {

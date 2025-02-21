@@ -1,0 +1,161 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="VietcongExeMissing" xml:space="preserve">
+        <value>Das Spiel kann nicht gestartet werden, da die Datei vietcong.exe nicht existiert</value>
+    </data>
+    <data name="AudioError1" xml:space="preserve">
+        <value>Verbessertes Audio kann nicht aktiviert werden, da Ihre Version von Vietcong Remastered nicht die erforderlichen Dateien enthält. Bitte aktualisieren Sie auf die neueste Version.</value>
+    </data>
+    <data name="AudioErrorGeneric" xml:space="preserve">
+        <value>Die verbesserten Audioeinstellungen konnten nicht gespeichert werden: {0}</value>
+    </data>
+    <data name="VegetationError1" xml:space="preserve">
+        <value>Die verbesserten Vegetationseinstellungen konnten nicht gespeichert werden, da die Datei /files/entra/4.cbf nicht existiert</value>
+    </data>
+    <data name="VegetationError2" xml:space="preserve">
+        <value>Die verbesserten Vegetationseinstellungen konnten nicht gespeichert werden, da die Datei /files/distra/4.cbf nicht existiert</value>
+    </data>
+    <data name="VegetationErrorGeneric" xml:space="preserve">
+        <value>Die verbesserten Vegetationseinstellungen konnten nicht gespeichert werden: {0}</value>
+    </data>
+    <data name="WeaponsAudioError1" xml:space="preserve">
+        <value>Die verbesserten Waffengeräusche konnten nicht gespeichert werden, da die Datei /files/disso/3.cbf nicht existiert</value>
+    </data>
+    <data name="WeaponsAudioError2" xml:space="preserve">
+        <value>Die verbesserten Waffengeräusche konnten nicht gespeichert werden, da die Datei /files/enso/3.cbf nicht existiert</value>
+    </data>
+    <data name="WeaponsAudioErrorGeneric" xml:space="preserve">
+        <value>Die verbesserten Waffengeräusche konnten nicht gespeichert werden: {0}</value>
+    </data>
+    <data name="RankedError1" xml:space="preserve">
+        <value>Die Ranglisten-Einstellungen konnten nicht gespeichert werden, da die Datei /files/ranked/4.cbf nicht existiert</value>
+    </data>
+    <data name="RankedError2" xml:space="preserve">
+        <value>Die Ranglisten-Einstellungen konnten nicht gespeichert werden, da die Datei /files/entra/4.cbf nicht existiert</value>
+    </data>
+    <data name="RankedErrorgeneric" xml:space="preserve">
+        <value>Die Ranglisten-Einstellungen konnten nicht gespeichert werden: {0}</value>
+    </data>
+    <data name="HelpError" xml:space="preserve">
+        <value>Die Hilfe kann nicht angezeigt werden, da die Datei navod.pdf fehlt</value>
+    </data>
+    <data name="ReShadeErrorGeneric" xml:space="preserve">
+        <value>Beim Parsen von ReShade.ini ist ein unerwarteter Fehler aufgetreten: {0}</value>
+    </data>
+    <data name="ReShadeError1" xml:space="preserve">
+        <value>Vietcong Remastered enthält eine ReShade.ini-Datei, die nicht gefunden wurde. Platzieren Sie vietcong_remastered.exe in dem Ordner, in dem sich vietcong.exe und ReShade.ini befinden</value>
+    </data>
+    <data name="ReShadeError2" xml:space="preserve">
+        <value>Bitte platzieren Sie den Vietcong Remastered Launcher in dem Ordner, in dem sich vietcong.exe befindet</value>
+    </data>
+    <data name="SettingsErrorGeneric" xml:space="preserve">
+        <value>Die Einstellungen konnten nicht gespeichert werden: {0}</value>
+    </data>
+    <data name="SettingsError1" xml:space="preserve">
+        <value>Die Einstellungen konnten nicht gespeichert werden, ReShade.ini existiert nicht</value>
+    </data>
+    <data name="UiSynchronizing" xml:space="preserve">
+        <value>Synchronisierung mit der Spielkonfiguration läuft, bitte warten...</value>
+    </data>
+    <data name="PostprocessingQuality" xml:space="preserve">
+        <value>Postprocessing-Qualität</value>
+    </data>
+    <data name="Improved3dSound" xml:space="preserve">
+        <value>Verbesserter 3D-Sound</value>
+    </data>
+    <data name="ShowFps" xml:space="preserve">
+        <value>FPS anzeigen</value>
+    </data>
+    <data name="ForceVSync" xml:space="preserve">
+        <value>V-Sync erzwingen</value>
+    </data>
+    <data name="DisableTranslucentVegetation" xml:space="preserve">
+        <value>Durchsichtige Vegetation deaktivieren</value>
+    </data>
+    <data name="DisableImprovedWeaponsSound" xml:space="preserve">
+        <value>Verbesserte Waffengeräusche deaktivieren</value>
+    </data>
+    <data name="RankedMode" xml:space="preserve">
+        <value>Ranglistenmodus für Mehrspieler</value>
+    </data>
+    <data name="Exit" xml:space="preserve">
+        <value>Beenden</value>
+    </data>
+    <data name="Help" xml:space="preserve">
+        <value>Handbuch</value>
+    </data>
+    <data name="Play" xml:space="preserve">
+        <value>Spielen</value>
+    </data>
+    <data name="VietcongClassic" xml:space="preserve">
+        <value>Vietcong Klassik</value>
+    </data>
+    <data name="FistAlpha" xml:space="preserve">
+        <value>Fist Alpha DLC</value>
+    </data>
+    <data name="Extreme" xml:space="preserve">
+        <value>Extrem</value>
+    </data>
+    <data name="Ultra" xml:space="preserve">
+        <value>Ultra</value>
+    </data>
+    <data name="VeryHigh" xml:space="preserve">
+        <value>Sehr hoch</value>
+    </data>
+    <data name="High" xml:space="preserve">
+        <value>Hoch</value>
+    </data>
+    <data name="Medium" xml:space="preserve">
+        <value>Mittel</value>
+    </data>
+    <data name="Low" xml:space="preserve">
+        <value>Niedrig</value>
+    </data>
+    <data name="UltraLow" xml:space="preserve">
+        <value>Sehr niedrig</value>
+    </data>
+    <data name="CultureError" xml:space="preserve">
+        <value>Kultur konnte nicht eingestellt werden: {0}</value>
+    </data>
+    <data name="HelpButtonHelp" xml:space="preserve">
+        <value>Zeigt das Handbuch an</value>
+    </data>
+    <data name="HelpPlayClassic" xml:space="preserve">
+        <value>Startet Vietcong Classic</value>
+    </data>
+    <data name="HelpPlayFistAlpha" xml:space="preserve">
+        <value>Startet Vietcong mit Fist Alpha DLC</value>
+    </data>
+    <data name="HelpPostprocessingQuality" xml:space="preserve">
+        <value>Ändert die Postprocessing-Qualität</value>
+    </data>
+    <data name="HelpImproveAudio" xml:space="preserve">
+        <value>Ändert die Audio-Engine zu kcat/dsoal</value>
+    </data>
+    <data name="HelpShowFps" xml:space="preserve">
+        <value>Zeigt/versteckt die FPS-Anzeige</value>
+    </data>
+    <data name="HelpForceVsync" xml:space="preserve">
+        <value>V-Sync kann Stuttering reduzieren, führt aber zu niedrigeren FPS</value>
+    </data>
+    <data name="HelpDisableTransVegetation" xml:space="preserve">
+        <value>Das Deaktivieren der durchsichtigen Vegetation kann die FPS leicht erhöhen</value>
+    </data>
+    <data name="HelpDisableWeaponSounds" xml:space="preserve">
+        <value>Setzt die Waffengeräusche auf Original zurück</value>
+    </data>
+    <data name="HelpRanked" xml:space="preserve">
+        <value>Einige Einstellungen werden angepasst, um faires Spielen zu gewährleisten</value>
+    </data>
+</root>
