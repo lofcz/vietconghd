@@ -90,6 +90,15 @@ namespace Vrc
                     MessageBox.Show(string.Format(Resources.Culture, ex.Message));
                 }
             }
+
+            if (Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName is "de")
+            {
+                const int shift = 15;
+                
+                ImprovedSoundCheck.Location = ImprovedSoundCheck.Location with { X = ImprovedSoundCheck.Location.X - shift };
+                ShowFps.Location = ShowFps.Location with { X = ShowFps.Location.X - shift };
+                ForceVsync.Location = ForceVsync.Location with { X = ForceVsync.Location.X - shift };
+            }
             
             // localization
             PostprocessingQualityLabel.Text = Resources.PostprocessingQuality;
@@ -478,6 +487,12 @@ namespace Vrc
             labelsFont = new Font(mainFont, labelsFontSize, FontStyle.Italic);
 
             int checksFontSize = 10;
+            
+            if (Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName is "de")
+            {
+                checksFontSize = 9;
+            }
+            
             checksFont = new Font(mainFont, checksFontSize, FontStyle.Italic);
             
             int playFontSize = 12;
