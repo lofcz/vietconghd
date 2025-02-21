@@ -494,13 +494,18 @@ namespace Vrc
 
         private void PostprocessingQuality_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateReshadeQuality();
+        }
+
+        void UpdateReshadeQuality()
+        {
             if (!ready)
             {
                 return;
             }
-
+            
             QualityItem item = (QualityItem)PostprocessingQuality.SelectedItem;
-            TrySetReShadeValue("GENERAL", "PresetPath", $".\\presets\\{item.Value}\\ReShadePreset.ini");
+            TrySetReShadeValue("GENERAL", "PresetPath", $".\\presets\\{item.Value}{(RankedMultiplayer.Checked ? "a" : string.Empty)}\\ReShadePreset.ini");
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -724,7 +729,7 @@ namespace Vrc
                     DisableTransVegetation.Checked = true;
                     DisableTransVegetation.Enabled = false;
                     DisableTransVegetation.Invalidate();
-
+                    
                     if (File.Exists("files/ranked/4.cbf"))
                     {
                         File.Copy("files/ranked/4.cbf", "4.cbf", true);
@@ -732,6 +737,7 @@ namespace Vrc
                     else
                     {
                         MessageBox.Show(Resources.RankedError1);
+                        return;
                     }
                 }
                 else
@@ -747,8 +753,11 @@ namespace Vrc
                     else
                     {
                         MessageBox.Show(Resources.RankedError2);
+                        return;
                     }
                 }
+
+                UpdateReshadeQuality();
             }
             catch (Exception e2)
             {
