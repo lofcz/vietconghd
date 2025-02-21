@@ -1,7 +1,8 @@
-
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+
+namespace Vrc;
 
 public class CustomCheckBox : CheckBox
 {
@@ -51,6 +52,7 @@ public class CustomCheckBox : CheckBox
         using (Pen pen = new Pen(Color.Black, 1))
         {
             e.Graphics.DrawRectangle(pen, checkRect);
+            e.Graphics.DrawLine(pen, checkRect.X + checkRect.Width - 1, checkRect.Y, checkRect.X + checkRect.Width - 1, checkRect.Y + checkRect.Height);
         }
 
         // Pokud je zaškrtnuto, vykreslíme X
@@ -96,5 +98,3 @@ public class CustomCheckBox : CheckBox
         return rect;
     }
 }
-
-

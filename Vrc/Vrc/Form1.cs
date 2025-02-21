@@ -29,6 +29,7 @@ namespace Vrc
 
         private Font playFont;
         private Font labelsFont;
+        private Font statusFont;
         private Font checksFont;
 
         private IniParser parser;
@@ -156,16 +157,83 @@ namespace Vrc
             DisableImprovedSounds.Font = checksFont;
             RankedMultiplayer.Font = checksFont;
             ExitCheckbox.Font = checksFont;
-            StatusLabel.Font = labelsFont;
+            StatusLabel.Font = statusFont;
 
             PlayClassicButton.Font = labelsFont;
             PlayFistAlpha.Font = labelsFont;
             HelpButton.Font = labelsFont;
 
             PlayLabel.Font = playFont;
+
+            SetupHelp();
             
             TryFindGame();
             _ = GetHashes();
+        }
+
+        void SetupHelp()
+        {
+            SetHelp(HelpButton, Resources.HelpButtonHelp);
+            SetHelp(PlayClassicButton, Resources.HelpPlayClassic);
+            SetHelp(PlayFistAlpha, Resources.HelpPlayFistAlpha);
+            SetHelp(PostprocessingQuality, Resources.HelpPostprocessingQuality);
+            SetHelp(ImprovedSoundCheck, Resources.HelpImproveAudio);
+            SetHelp(ShowFps, Resources.HelpShowFps);
+            SetHelp(ForceVsync, Resources.HelpForceVsync);
+            SetHelp(DisableTransVegetation, Resources.HelpDisableTransVegetation);
+            SetHelp(DisableImprovedSounds, Resources.HelpDisableWeaponSounds);
+            SetHelp(DisableImprovedSounds, Resources.HelpDisableWeaponSounds);
+            SetHelp(RankedMultiplayer, Resources.HelpRanked);
+        }
+        
+        public void SetHelp(Control control, string helpText)
+        {
+            control.MouseEnter += (object sender, EventArgs e) =>
+            {
+                StatusLabel.Text = helpText;
+                
+                float fontSize = statusFont.Size;
+                do
+                {
+                    using (Graphics g = StatusLabel.CreateGraphics())
+                    using (Font tempFont = new Font(statusFont.FontFamily, fontSize, statusFont.Style))
+                    {
+                        SizeF textSize = g.MeasureString(helpText, tempFont);
+
+                        if (textSize.Width <= StatusLabel.Width && textSize.Height <= StatusLabel.Height)
+                            break;
+                    }
+        
+                    fontSize -= 0.2f;
+                    if (fontSize <= 6) 
+                    {
+                        fontSize = 6;
+                        break;
+                    }
+                } while (true);
+    
+                if (Math.Abs(fontSize - statusFont.Size) > 0.1f)
+                {
+                    using Font oldFont = !StatusLabel.Font.Equals(statusFont) ? StatusLabel.Font : null;
+                    StatusLabel.Font = new Font(statusFont.FontFamily, fontSize, statusFont.Style);
+                }
+                
+                StatusLabel.Invalidate();
+            };
+    
+            control.MouseLeave += (object sender, EventArgs e) =>
+            {
+                StatusLabel.Text = string.Empty;
+                
+                if (!StatusLabel.Font.Equals(statusFont))
+                {
+                    using Font oldFont = StatusLabel.Font;
+                    StatusLabel.Font = statusFont;
+                }
+                
+                StatusLabel.Font = statusFont; 
+                StatusLabel.Invalidate();
+            };
         }
 
         async Task GetHashes()
@@ -414,6 +482,9 @@ namespace Vrc
             
             int playFontSize = 12;
             playFont = new Font(mainFont, playFontSize, FontStyle.Italic);
+            
+            int statusFontSize = 10;
+            statusFont = new Font(mainFont, statusFontSize, FontStyle.Italic);
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

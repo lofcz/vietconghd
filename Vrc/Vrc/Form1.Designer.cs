@@ -33,24 +33,23 @@ namespace Vrc
         /// </summary>
         private void InitializeComponent()
         {
-            //System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.rightPanel = new Vrc.CustomPanel();
-            this.ExitCheckbox = new CustomCheckBox();
+            this.ExitCheckbox = new Vrc.CustomCheckBox();
             this.PlayLabel = new System.Windows.Forms.Label();
-            this.PlayFistAlpha = new CustomButton();
-            this.PlayClassicButton = new CustomButton();
-            this.HelpButton = new CustomButton();
+            this.PlayFistAlpha = new Vrc.CustomButton();
+            this.PlayClassicButton = new Vrc.CustomButton();
+            this.HelpButton = new Vrc.CustomButton();
             this.bottomPanel = new Vrc.CustomPanel();
             this.StatusLabel = new System.Windows.Forms.Label();
             this.mainPanel = new Vrc.CustomPanel();
             this.PostprocessingQualityLabel = new System.Windows.Forms.Label();
-            this.PostprocessingQuality = new CustomComboBox();
-            this.RankedMultiplayer = new CustomCheckBox();
-            this.DisableImprovedSounds = new CustomCheckBox();
-            this.DisableTransVegetation = new CustomCheckBox();
-            this.ForceVsync = new CustomCheckBox();
-            this.ShowFps = new CustomCheckBox();
-            this.ImprovedSoundCheck = new CustomCheckBox();
+            this.PostprocessingQuality = new Vrc.CustomComboBox();
+            this.RankedMultiplayer = new Vrc.CustomCheckBox();
+            this.DisableImprovedSounds = new Vrc.CustomCheckBox();
+            this.DisableTransVegetation = new Vrc.CustomCheckBox();
+            this.ForceVsync = new Vrc.CustomCheckBox();
+            this.ShowFps = new Vrc.CustomCheckBox();
+            this.ImprovedSoundCheck = new Vrc.CustomCheckBox();
             this.bgPicture = new Vrc.CustomPictureBox();
             this.rightPanel.SuspendLayout();
             this.bottomPanel.SuspendLayout();
@@ -163,11 +162,10 @@ namespace Vrc
             // StatusLabel
             // 
             this.StatusLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.StatusLabel.AutoSize = true;
             this.StatusLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.StatusLabel.Location = new System.Drawing.Point(12, 7);
+            this.StatusLabel.Location = new System.Drawing.Point(12, 5);
             this.StatusLabel.Name = "StatusLabel";
-            this.StatusLabel.Size = new System.Drawing.Size(95, 17);
+            this.StatusLabel.Size = new System.Drawing.Size(565, 23);
             this.StatusLabel.TabIndex = 10;
             this.StatusLabel.Text = "STATUS BAR";
             this.StatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -321,9 +319,9 @@ namespace Vrc
             this.Controls.Add(this.bgPicture);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            #if !DEBUG
+#if !DEBUG
             this.Icon = System.Drawing.Icon.FromHandle(Resources.CustomAppIcon.GetHicon());
-            #endif
+#endif
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
@@ -332,7 +330,6 @@ namespace Vrc
             this.rightPanel.ResumeLayout(false);
             this.rightPanel.PerformLayout();
             this.bottomPanel.ResumeLayout(false);
-            this.bottomPanel.PerformLayout();
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bgPicture)).EndInit();
@@ -351,17 +348,17 @@ namespace Vrc
 
         private CustomComboBox PostprocessingQuality;
 
-        private CustomCheckBox ForceVsync;
+        private Vrc.CustomCheckBox ForceVsync;
 
-        private CustomCheckBox RankedMultiplayer;
+        private Vrc.CustomCheckBox RankedMultiplayer;
 
-        private CustomCheckBox DisableImprovedSounds;
+        private Vrc.CustomCheckBox DisableImprovedSounds;
 
-        private CustomCheckBox DisableTransVegetation;
+        private Vrc.CustomCheckBox DisableTransVegetation;
 
-        private CustomCheckBox ShowFps;
+        private Vrc.CustomCheckBox ShowFps;
 
-        private CustomCheckBox ImprovedSoundCheck;
+        private Vrc.CustomCheckBox ImprovedSoundCheck;
 
         private Vrc.CustomPanel mainPanel;
 

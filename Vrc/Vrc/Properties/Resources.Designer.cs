@@ -199,11 +199,92 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Turning off transparent vegetation can slightly increase FPS.
+        /// </summary>
+        internal static string HelpDisableTransVegetation {
+            get {
+                return ResourceManager.GetString("HelpDisableTransVegetation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sets weapon sounds to original.
+        /// </summary>
+        internal static string HelpDisableWeaponSounds {
+            get {
+                return ResourceManager.GetString("HelpDisableWeaponSounds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help cannot be displayed because the navod.pdf file is missing.
         /// </summary>
         internal static string HelpError {
             get {
                 return ResourceManager.GetString("HelpError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to V-Sync can reduce stuttering at the cost of lower FPS.
+        /// </summary>
+        internal static string HelpForceVsync {
+            get {
+                return ResourceManager.GetString("HelpForceVsync", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changes the audio engine to kcat/dsoalClick to apply.
+        /// </summary>
+        internal static string HelpImproveAudio {
+            get {
+                return ResourceManager.GetString("HelpImproveAudio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launches Vietcong Classic.
+        /// </summary>
+        internal static string HelpPlayClassic {
+            get {
+                return ResourceManager.GetString("HelpPlayClassic", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Launches Vietcong with Fist Alpha DLC.
+        /// </summary>
+        internal static string HelpPlayFistAlpha {
+            get {
+                return ResourceManager.GetString("HelpPlayFistAlpha", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change the quality of post-processing.
+        /// </summary>
+        internal static string HelpPostprocessingQuality {
+            get {
+                return ResourceManager.GetString("HelpPostprocessingQuality", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Several settings will be adjusted to ensure fair play.
+        /// </summary>
+        internal static string HelpRanked {
+            get {
+                return ResourceManager.GetString("HelpRanked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show/hide FPS indicator.
+        /// </summary>
+        internal static string HelpShowFps {
+            get {
+                return ResourceManager.GetString("HelpShowFps", resourceCulture);
             }
         }
         

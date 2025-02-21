@@ -3,6 +3,8 @@ using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
+namespace Vrc;
+
 public class CustomComboBox : ComboBox
 {
     private readonly Color borderColor = Color.Black;
@@ -97,10 +99,10 @@ public class CustomComboBox : ComboBox
         using(Pen pen = new Pen(arrowColor, 1))
         {
             e.Graphics.DrawLine(pen,
-                    arrowLeft - 1,
-                    arrowTop + arrowSize + 1,
-                    arrowLeft + arrowSize + 1,
-                    arrowTop + arrowSize + 1);
+                arrowLeft - 1,
+                arrowTop + arrowSize + 1,
+                arrowLeft + arrowSize + 1,
+                arrowTop + arrowSize + 1);
         }
   
         // Finally, draw the custom border.

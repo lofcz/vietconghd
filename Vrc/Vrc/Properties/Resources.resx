@@ -250,4 +250,31 @@
   <data name="HelpButtonHelp" xml:space="preserve">
     <value>Opens the manual</value>
   </data>
+  <data name="HelpPlayClassic" xml:space="preserve">
+    <value>Launches Vietcong Classic</value>
+  </data>
+  <data name="HelpPlayFistAlpha" xml:space="preserve">
+    <value>Launches Vietcong with Fist Alpha DLC</value>
+  </data>
+  <data name="HelpPostprocessingQuality" xml:space="preserve">
+    <value>Change the quality of post-processing</value>
+  </data>
+  <data name="HelpImproveAudio" xml:space="preserve">
+    <value>Changes the audio engine to kcat/dsoalClick to apply</value>
+  </data>
+  <data name="HelpShowFps" xml:space="preserve">
+    <value>Show/hide FPS indicator</value>
+  </data>
+  <data name="HelpForceVsync" xml:space="preserve">
+    <value>V-Sync can reduce stuttering at the cost of lower FPS</value>
+  </data>
+  <data name="HelpDisableTransVegetation" xml:space="preserve">
+    <value>Turning off transparent vegetation can slightly increase FPS</value>
+  </data>
+  <data name="HelpDisableWeaponSounds" xml:space="preserve">
+    <value>Sets weapon sounds to original</value>
+  </data>
+  <data name="HelpRanked" xml:space="preserve">
+    <value>Several settings will be adjusted to ensure fair play</value>
+  </data>
 </root>

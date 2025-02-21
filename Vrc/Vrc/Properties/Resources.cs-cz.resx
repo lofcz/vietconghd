@@ -131,4 +131,31 @@
     <data name="HelpButtonHelp" xml:space="preserve">
         <value>Zobrazí manuál</value>
     </data>
+    <data name="HelpPlayClassic" xml:space="preserve">
+        <value>Spustí Vietcong Classic</value>
+    </data>
+    <data name="HelpPlayFistAlpha" xml:space="preserve">
+        <value>Spustí Vietcong s DLC Fist Alpha</value>
+    </data>
+    <data name="HelpPostprocessingQuality" xml:space="preserve">
+        <value>Změna kvality postprocessingu</value>
+    </data>
+    <data name="HelpImproveAudio" xml:space="preserve">
+        <value>Změní audio engine na kcat/dsoal</value>
+    </data>
+    <data name="HelpShowFps" xml:space="preserve">
+        <value>Zobrazí / skryje ukazatel FPS</value>
+    </data>
+    <data name="HelpForceVsync" xml:space="preserve">
+        <value>V-Sync může snížit stuttering za cenu nižších FPS</value>
+    </data>
+    <data name="HelpDisableTransVegetation" xml:space="preserve">
+        <value>Vypnutí průhledné vegetace může lehce zvýšit FPS</value>
+    </data>
+    <data name="HelpDisableWeaponSounds" xml:space="preserve">
+        <value>Nastaví zvuky zbraní na originální</value>
+    </data>
+    <data name="HelpRanked" xml:space="preserve">
+        <value>Několik nastavení bude upraveno tak, aby byla zajištěna férová hra</value>
+    </data>
 </root>
