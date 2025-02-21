@@ -7,8 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System.Drawing;
-
 namespace Vrc.Properties {
     using System;
     
@@ -90,21 +88,21 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static Icon AppIcon {
-            get {
-                object obj = ResourceManager.GetObject("AppIcon", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Failed to set the culture: {0}.
         /// </summary>
         internal static string CultureError {
             get {
                 return ResourceManager.GetString("CultureError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CustomAppIcon {
+            get {
+                object obj = ResourceManager.GetObject("CustomAppIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -188,6 +186,15 @@ namespace Vrc.Properties {
         internal static string Help {
             get {
                 return ResourceManager.GetString("Help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Opens the manual.
+        /// </summary>
+        internal static string HelpButtonHelp {
+            get {
+                return ResourceManager.GetString("HelpButtonHelp", resourceCulture);
             }
         }
         

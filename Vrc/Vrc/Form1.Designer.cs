@@ -1,3 +1,4 @@
+using System.Drawing;
 using System.Windows.Forms;
 using Vrc.Properties;
 
@@ -320,7 +321,9 @@ namespace Vrc
             this.Controls.Add(this.bgPicture);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(Resources.AppIcon));
+            #if !DEBUG
+            this.Icon = System.Drawing.Icon.FromHandle(Resources.CustomAppIcon.GetHicon());
+            #endif
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
