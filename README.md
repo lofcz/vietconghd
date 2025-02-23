@@ -1,6 +1,6 @@
 # Vietcong HD Remaster Launcher
 
-This is a launcher for the [Vietcong HD Remaster](https://www.moddb.com/mods/del-vietcong-hd-remaster) project.
+This is the launcher for the [Vietcong HD Remaster](https://www.moddb.com/mods/del-vietcong-hd-remaster) project.
 
 ## Getting Started
 
