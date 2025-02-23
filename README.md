@@ -23,4 +23,4 @@ The system culture is used by default, with `en-en` fallback.
 
 ## Building
 
-Vietcong HD Remaster currently targets `.net fw 4.7.2` to produce small binaries. After cloning the repository and restoring it, building should work in any standard IDE (JetBrains, Visual Studio). The build produces a single executable with all resources embedded.
+Vietcong HD Remaster currently targets `.net framework 4.7.2` to produce small binaries. After cloning and restoring the repository, building should work in any standard IDE (JetBrains, Visual Studio). The build creates a single executable with all resources embedded.
