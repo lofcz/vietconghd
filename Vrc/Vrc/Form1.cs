@@ -329,11 +329,10 @@ namespace Vrc
             {
                 DisableImprovedSounds.Checked = true;
             }
-            else if (active.Cbf3 == radhash.Enso || true)
+            else
             {
                 DisableImprovedSounds.Checked = false;
             }
-            
     
             if (active.Cbf4 == radhash.Ranked)
             {
@@ -344,12 +343,12 @@ namespace Vrc
             else if (active.Cbf4 == radhash.Entra)
             {
                 RankedMultiplayer.Checked = false;
-                DisableTransVegetation.Checked = true;
+                DisableTransVegetation.Checked = active.Cbf4 == radhash.Distra;
             }
             else
             {
                 RankedMultiplayer.Checked = false;
-                DisableTransVegetation.Checked = false;
+                DisableTransVegetation.Checked = active.Cbf4 == radhash.Distra;
             }
 
             DisableTransVegetation.Invalidate();
