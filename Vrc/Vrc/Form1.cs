@@ -97,14 +97,14 @@ namespace Vrc
                 
                 ImprovedSoundCheck.Location = ImprovedSoundCheck.Location with { X = ImprovedSoundCheck.Location.X - shift };
                 ShowFps.Location = ShowFps.Location with { X = ShowFps.Location.X - shift };
-                ForceVsync.Location = ForceVsync.Location with { X = ForceVsync.Location.X - shift };
+                RunWindowed.Location = RunWindowed.Location with { X = RunWindowed.Location.X - shift };
             }
             
             // localization
             PostprocessingQualityLabel.Text = Resources.PostprocessingQuality;
             ImprovedSoundCheck.Text = Resources.Improved3dSound;
             ShowFps.Text = Resources.ShowFps;
-            ForceVsync.Text = Resources.ForceVSync;
+            RunWindowed.Text = Resources.RunWindowed;
             DisableTransVegetation.Text = Resources.DisableTranslucentVegetation;
             DisableImprovedSounds.Text = Resources.DisableImprovedWeaponsSound;
             RankedMultiplayer.Text = Resources.RankedMode;
@@ -128,7 +128,7 @@ namespace Vrc
             ImprovedSoundCheck.Parent = mainPanel;
             ImprovedSoundCheck.Parent = mainPanel;
             ShowFps.Parent = mainPanel;
-            ForceVsync.Parent = mainPanel;
+            RunWindowed.Parent = mainPanel;
             DisableTransVegetation.Parent = mainPanel;
             DisableImprovedSounds.Parent = mainPanel;
             RankedMultiplayer.Parent = mainPanel;
@@ -161,7 +161,7 @@ namespace Vrc
             PostprocessingQualityLabel.Font = labelsFont;
             ImprovedSoundCheck.Font = checksFont;
             ShowFps.Font = checksFont;
-            ForceVsync.Font = checksFont;
+            RunWindowed.Font = checksFont;
             DisableTransVegetation.Font = checksFont;
             DisableImprovedSounds.Font = checksFont;
             RankedMultiplayer.Font = checksFont;
@@ -188,11 +188,12 @@ namespace Vrc
             SetHelp(PostprocessingQuality, Resources.HelpPostprocessingQuality);
             SetHelp(ImprovedSoundCheck, Resources.HelpImproveAudio);
             SetHelp(ShowFps, Resources.HelpShowFps);
-            SetHelp(ForceVsync, Resources.HelpForceVsync);
+            SetHelp(RunWindowed, Resources.HelpRunWindowed);
             SetHelp(DisableTransVegetation, Resources.HelpDisableTransVegetation);
             SetHelp(DisableImprovedSounds, Resources.HelpDisableWeaponSounds);
             SetHelp(DisableImprovedSounds, Resources.HelpDisableWeaponSounds);
             SetHelp(RankedMultiplayer, Resources.HelpRanked);
+            SetHelp(DiscordImg, Resources.HelpDiscord);
         }
         
         public void SetHelp(Control control, string helpText)
@@ -411,7 +412,7 @@ namespace Vrc
 
                string showFps = parser.GetValue("OVERLAY", "ShowFPS");
                string presetPath = parser.GetValue("GENERAL", "PresetPath");
-               string forceVsync = parser.GetValue("APP", "ForceVsync");
+               string runWindowed = parser.GetValue("APP", "ForceWindowed");
 
                if (showFps is "1")
                {
@@ -419,9 +420,9 @@ namespace Vrc
                    ShowFps.Invalidate();
                }
 
-               if (forceVsync is "1")
+               if (runWindowed is "1")
                {
-                   ForceVsync.Checked = true;
+                   RunWindowed.Checked = true;
                    ShowFps.Invalidate();
                }
 
@@ -602,14 +603,20 @@ namespace Vrc
             TrySetReShadeValue("OVERLAY", "ShowFPS", ShowFps.Checked ? "1" : "0");
         }
 
-        private void ForceVsync_CheckedChanged(object sender, EventArgs e)
+        private void ForceRunWindowed_CheckedChanged(object sender, EventArgs e)
         {
             if (!ready)
             {
                 return;
             }
-            
-            TrySetReShadeValue("APP", "ForceVsync", ForceVsync.Checked ? "1" : "0");
+
+            if (RunWindowed.Checked)
+            {
+                TrySetReShadeValue("APP", "ForceFullscreen", "0");
+                TrySetReShadeValue("APP", "ForceVsync", "0");                
+            }
+
+            TrySetReShadeValue("APP", "ForceWindowed", RunWindowed.Checked ? "1" : "0");
         }
 
         private void ImprovedSoundCheck_CheckedChanged(object sender, EventArgs e)
@@ -806,6 +813,11 @@ namespace Vrc
             }
 
             MessageBox.Show(Resources.HelpError);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://discord.gg/D5UugykcHZ");
         }
     }
 }

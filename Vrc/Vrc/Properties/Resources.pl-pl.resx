@@ -102,7 +102,7 @@
         <value>Vietcong Klasyczny</value>
     </data>
     <data name="FistAlpha" xml:space="preserve">
-        <value>Pięść Alpha DLC</value>
+        <value>Fist Alpha DLC</value>
     </data>
     <data name="Extreme" xml:space="preserve">
         <value>Ekstremalna</value>
@@ -157,5 +157,14 @@
     </data>
     <data name="HelpRanked" xml:space="preserve">
         <value>Niektóre ustawienia zostaną dostosowane, aby zapewnić uczciwą grę</value>
+    </data>
+    <data name="RunWindowed" xml:space="preserve">
+        <value>Uruchomić w oknie</value>
+    </data>
+    <data name="HelpRunWindowed" xml:space="preserve">
+        <value>Może poprawić stabilność i wyeliminować zacinanie obrazu</value>
+    </data>
+    <data name="HelpDiscord" xml:space="preserve">
+        <value>Vietcong HD Remaster Discord</value>
     </data>
 </root>

@@ -102,7 +102,7 @@
         <value>Vietcong Klasika</value>
     </data>
     <data name="FistAlpha" xml:space="preserve">
-        <value>Pěst Alpha DLC</value>
+        <value>Fist Alpha DLC</value>
     </data>
     <data name="Extreme" xml:space="preserve">
         <value>Extrémní</value>
@@ -157,5 +157,14 @@
     </data>
     <data name="HelpRanked" xml:space="preserve">
         <value>Několik nastavení bude upraveno tak, aby byla zajištěna férová hra</value>
+    </data>
+    <data name="RunWindowed" xml:space="preserve">
+        <value>Spustit v okně</value>
+    </data>
+    <data name="HelpRunWindowed" xml:space="preserve">
+        <value>Může zlepšit stabilitu a odstranit trhání obrazu</value>
+    </data>
+    <data name="HelpDiscord" xml:space="preserve">
+        <value>Vietcong HD Remaster Discord</value>
     </data>
 </root>

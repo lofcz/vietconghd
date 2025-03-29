@@ -158,4 +158,13 @@
     <data name="HelpRanked" xml:space="preserve">
         <value>Einige Einstellungen werden angepasst, um faires Spielen zu gewährleisten</value>
     </data>
+    <data name="RunWindowed" xml:space="preserve">
+        <value>Im Fenstermodus starten</value>
+    </data>
+    <data name="HelpRunWindowed" xml:space="preserve">
+        <value>Kann die Stabilität verbessern und Bildstörungen beseitigen</value>
+    </data>
+    <data name="HelpDiscord" xml:space="preserve">
+        <value>Vietcong HD Remaster Discord</value>
+    </data>
 </root>

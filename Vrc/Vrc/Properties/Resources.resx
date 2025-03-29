@@ -117,144 +117,126 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="HelpDisableWeaponSounds" xml:space="preserve">
+    <value>Sets weapon sounds to original</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cc894e4b_cac2_4ff2_8327_4b787907d956" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cc894e4b_cac2_4ff2_8327_4b787907d956.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="fontItalics" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fontItalics.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="CustomAppIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="font" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\font.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="fontItalics" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fontItalics.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="VietcongExeMissing" xml:space="preserve">
-    <value>The game cannot be started because the vietcong.exe file does not exist</value>
-  </data>
-  <data name="AudioError1" xml:space="preserve">
-    <value>Enhanced audio cannot be activated because your version of Vietcong Remastered does not contain the necessary files. Please update to the latest version.</value>
-  </data>
-  <data name="AudioErrorGeneric" xml:space="preserve">
-    <value>The settings for the enhanced sounds could not be saved: {0}</value>
-  </data>
-  <data name="VegetationError1" xml:space="preserve">
-    <value>Enhanced vegetation settings could not be saved because the /files/entra/4.cbf file does not exist</value>
-  </data>
-  <data name="VegetationError2" xml:space="preserve">
-    <value>Enhanced vegetation settings could not be saved because the /files/distra/4.cbf file does not exist</value>
-  </data>
-  <data name="VegetationErrorGeneric" xml:space="preserve">
-    <value>Enhanced vegetation settings could not be saved: {0}</value>
-  </data>
-  <data name="WeaponsAudioError1" xml:space="preserve">
-    <value>Enhanced weapon sound settings could not be saved because there is no /files/disso/3.cbf file</value>
-  </data>
-  <data name="WeaponsAudioError2" xml:space="preserve">
-    <value>The settings for the enhanced weapon sounds could not be saved because the /files/enso/3.cbf file does not exist</value>
-  </data>
-  <data name="WeaponsAudioErrorGeneric" xml:space="preserve">
-    <value>The settings for the enhanced weapon sounds could not be saved: {0}</value>
-  </data>
-  <data name="RankedError1" xml:space="preserve">
-    <value>The settings of the rated game could not be saved because the file /files/ranked/4.cbf does not exist</value>
-  </data>
-  <data name="RankedError2" xml:space="preserve">
-    <value>The settings of the rated game could not be saved because the file /files/entra/4.cbf does not exist</value>
-  </data>
-  <data name="RankedErrorgeneric" xml:space="preserve">
-    <value>The settings of the rated game could not be saved: {0}</value>
-  </data>
-  <data name="HelpError" xml:space="preserve">
-    <value>Help cannot be displayed because the navod.pdf file is missing</value>
-  </data>
-  <data name="ReShadeErrorGeneric" xml:space="preserve">
-    <value>An unexpected error occurred while parsing ReShade.ini: {0}</value>
-  </data>
-  <data name="ReShadeError1" xml:space="preserve">
-    <value>Vietcong Remastered contains a ReShade.ini file that was not found. Place vietcong_remastered.exe in the folder containing vietcong.exe and ReShade.ini</value>
-  </data>
-  <data name="ReShadeError2" xml:space="preserve">
-    <value>Put Vietcong Remastered Launcher in the folder where vietcong.exe is located</value>
-  </data>
-  <data name="SettingsErrorGeneric" xml:space="preserve">
-    <value>The settings could not be saved: {0}</value>
-  </data>
-  <data name="SettingsError1" xml:space="preserve">
-    <value>Settings could not be saved, ReShade.ini does not exist</value>
-  </data>
-  <data name="UiSynchronizing" xml:space="preserve">
-    <value>Synchronizing with the game configuration, a moment of patience...</value>
-  </data>
-  <data name="PostprocessingQuality" xml:space="preserve">
-    <value>Postprocessing quality</value>
-  </data>
-  <data name="Improved3dSound" xml:space="preserve">
-    <value>Improved 3D Sound</value>
-  </data>
-  <data name="ShowFps" xml:space="preserve">
-    <value>Show FPS</value>
-  </data>
-  <data name="ForceVSync" xml:space="preserve">
-    <value>Force V-Sync</value>
-  </data>
-  <data name="DisableTranslucentVegetation" xml:space="preserve">
-    <value>Disable translucent vegetation</value>
-  </data>
-  <data name="DisableImprovedWeaponsSound" xml:space="preserve">
-    <value>Disable improved weapon sounds</value>
-  </data>
-  <data name="RankedMode" xml:space="preserve">
-    <value>Ranked multiplayer mode</value>
-  </data>
   <data name="Exit" xml:space="preserve">
     <value>Exit</value>
   </data>
-  <data name="Help" xml:space="preserve">
-    <value>Help</value>
-  </data>
-  <data name="Play" xml:space="preserve">
-    <value>Play</value>
-  </data>
-  <data name="VietcongClassic" xml:space="preserve">
-    <value>Vietcong Classic</value>
-  </data>
-  <data name="FistAlpha" xml:space="preserve">
-    <value>Fist Alpha DLC</value>
-  </data>
-  <data name="Extreme" xml:space="preserve">
-    <value>Extreme</value>
-  </data>
-  <data name="Ultra" xml:space="preserve">
-    <value>Ultra</value>
-  </data>
-  <data name="VeryHigh" xml:space="preserve">
-    <value>Very High</value>
-  </data>
-  <data name="High" xml:space="preserve">
-    <value>High</value>
-  </data>
-  <data name="Medium" xml:space="preserve">
-    <value>Medium</value>
-  </data>
-  <data name="Low" xml:space="preserve">
-    <value>Low</value>
-  </data>
-  <data name="UltraLow" xml:space="preserve">
-    <value>Ultra Low</value>
-  </data>
-  <data name="CultureError" xml:space="preserve">
-    <value>Failed to set the culture: {0}</value>
-  </data>
-  <data name="HelpButtonHelp" xml:space="preserve">
-    <value>Opens the manual</value>
+  <data name="HelpDisableTransVegetation" xml:space="preserve">
+    <value>Turning off transparent vegetation can slightly increase FPS</value>
   </data>
   <data name="HelpPlayClassic" xml:space="preserve">
     <value>Launches Vietcong Classic</value>
   </data>
-  <data name="HelpPlayFistAlpha" xml:space="preserve">
-    <value>Launches Vietcong with Fist Alpha DLC</value>
+  <data name="SettingsError1" xml:space="preserve">
+    <value>Settings could not be saved, ReShade.ini does not exist</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="UiSynchronizing" xml:space="preserve">
+    <value>Synchronizing with the game configuration, a moment of patience...</value>
+  </data>
+  <data name="VegetationError2" xml:space="preserve">
+    <value>Enhanced vegetation settings could not be saved because the /files/distra/4.cbf file does not exist</value>
+  </data>
+  <data name="font" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\font.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="HelpRunWindowed" xml:space="preserve">
+    <value>May improve stability and reduce tearing</value>
+  </data>
+  <data name="VietcongExeMissing" xml:space="preserve">
+    <value>The game cannot be started because the vietcong.exe file does not exist</value>
+  </data>
+  <data name="RankedError2" xml:space="preserve">
+    <value>The settings of the rated game could not be saved because the file /files/entra/4.cbf does not exist</value>
+  </data>
+  <data name="Medium" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="VegetationError1" xml:space="preserve">
+    <value>Enhanced vegetation settings could not be saved because the /files/entra/4.cbf file does not exist</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="WeaponsAudioErrorGeneric" xml:space="preserve">
+    <value>The settings for the enhanced weapon sounds could not be saved: {0}</value>
+  </data>
+  <data name="HelpButtonHelp" xml:space="preserve">
+    <value>Opens the manual</value>
+  </data>
+  <data name="RunWindowed" xml:space="preserve">
+    <value>Run Windowed</value>
+  </data>
+  <data name="VeryHigh" xml:space="preserve">
+    <value>Very High</value>
+  </data>
+  <data name="DisableTranslucentVegetation" xml:space="preserve">
+    <value>Disable translucent vegetation</value>
+  </data>
+  <data name="ReShadeError1" xml:space="preserve">
+    <value>Vietcong Remastered contains a ReShade.ini file that was not found. Place vietcong_remastered.exe in the folder containing vietcong.exe and ReShade.ini</value>
+  </data>
+  <data name="Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="WeaponsAudioError1" xml:space="preserve">
+    <value>Enhanced weapon sound settings could not be saved because there is no /files/disso/3.cbf file</value>
+  </data>
+  <data name="AudioError1" xml:space="preserve">
+    <value>Enhanced audio cannot be activated because your version of Vietcong Remastered does not contain the necessary files. Please update to the latest version.</value>
+  </data>
+  <data name="SettingsErrorGeneric" xml:space="preserve">
+    <value>The settings could not be saved: {0}</value>
+  </data>
+  <data name="PostprocessingQuality" xml:space="preserve">
+    <value>Postprocessing quality</value>
+  </data>
+  <data name="High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="AudioErrorGeneric" xml:space="preserve">
+    <value>The settings for the enhanced sounds could not be saved: {0}</value>
+  </data>
+  <data name="RankedErrorgeneric" xml:space="preserve">
+    <value>The settings of the rated game could not be saved: {0}</value>
+  </data>
+  <data name="WeaponsAudioError2" xml:space="preserve">
+    <value>The settings for the enhanced weapon sounds could not be saved because the /files/enso/3.cbf file does not exist</value>
+  </data>
+  <data name="HelpForceVsync" xml:space="preserve">
+    <value>V-Sync can reduce stuttering at the cost of lower FPS</value>
+  </data>
+  <data name="FistAlpha" xml:space="preserve">
+    <value>Fist Alpha DLC</value>
+  </data>
+  <data name="ShowFps" xml:space="preserve">
+    <value>Show FPS</value>
+  </data>
+  <data name="HelpRanked" xml:space="preserve">
+    <value>Several settings will be adjusted to ensure fair play</value>
+  </data>
+  <data name="HelpDiscord" xml:space="preserve">
+    <value>Vietcong HD Remaster Discord</value>
+  </data>
+  <data name="Ultra" xml:space="preserve">
+    <value>Ultra</value>
+  </data>
+  <data name="CultureError" xml:space="preserve">
+    <value>Failed to set the culture: {0}</value>
+  </data>
+  <data name="RankedMode" xml:space="preserve">
+    <value>Ranked multiplayer mode</value>
   </data>
   <data name="HelpPostprocessingQuality" xml:space="preserve">
     <value>Change the quality of post-processing</value>
@@ -262,19 +244,49 @@
   <data name="HelpImproveAudio" xml:space="preserve">
     <value>Changes the audio engine to kcat/dsoalClick to apply</value>
   </data>
+  <data name="HelpPlayFistAlpha" xml:space="preserve">
+    <value>Launches Vietcong with Fist Alpha DLC</value>
+  </data>
+  <data name="HelpError" xml:space="preserve">
+    <value>Help cannot be displayed because the navod.pdf file is missing</value>
+  </data>
+  <data name="cc894e4b_cac2_4ff2_8327_4b787907d956" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cc894e4b_cac2_4ff2_8327_4b787907d956.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="VietcongClassic" xml:space="preserve">
+    <value>Vietcong Classic</value>
+  </data>
+  <data name="ReShadeErrorGeneric" xml:space="preserve">
+    <value>An unexpected error occurred while parsing ReShade.ini: {0}</value>
+  </data>
+  <data name="DisableImprovedWeaponsSound" xml:space="preserve">
+    <value>Disable improved weapon sounds</value>
+  </data>
+  <data name="Extreme" xml:space="preserve">
+    <value>Extreme</value>
+  </data>
+  <data name="ForceVSync" xml:space="preserve">
+    <value>Force V-Sync</value>
+  </data>
+  <data name="Improved3dSound" xml:space="preserve">
+    <value>Improved 3D Sound</value>
+  </data>
+  <data name="UltraLow" xml:space="preserve">
+    <value>Ultra Low</value>
+  </data>
+  <data name="ReShadeError2" xml:space="preserve">
+    <value>Put Vietcong Remastered Launcher in the folder where vietcong.exe is located</value>
+  </data>
+  <data name="VegetationErrorGeneric" xml:space="preserve">
+    <value>Enhanced vegetation settings could not be saved: {0}</value>
+  </data>
+  <data name="RankedError1" xml:space="preserve">
+    <value>The settings of the rated game could not be saved because the file /files/ranked/4.cbf does not exist</value>
+  </data>
   <data name="HelpShowFps" xml:space="preserve">
     <value>Show/hide FPS indicator</value>
   </data>
-  <data name="HelpForceVsync" xml:space="preserve">
-    <value>V-Sync can reduce stuttering at the cost of lower FPS</value>
-  </data>
-  <data name="HelpDisableTransVegetation" xml:space="preserve">
-    <value>Turning off transparent vegetation can slightly increase FPS</value>
-  </data>
-  <data name="HelpDisableWeaponSounds" xml:space="preserve">
-    <value>Sets weapon sounds to original</value>
-  </data>
-  <data name="HelpRanked" xml:space="preserve">
-    <value>Several settings will be adjusted to ensure fair play</value>
+  <data name="discord" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\discord.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

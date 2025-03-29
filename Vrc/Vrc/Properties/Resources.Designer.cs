@@ -18,7 +18,7 @@ namespace Vrc.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -125,6 +125,16 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap discord {
+            get {
+                object obj = ResourceManager.GetObject("discord", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
         internal static string Exit {
@@ -217,6 +227,15 @@ namespace Vrc.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vietcong HD Remaster Discord.
+        /// </summary>
+        internal static string HelpDiscord {
+            get {
+                return ResourceManager.GetString("HelpDiscord", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Help cannot be displayed because the navod.pdf file is missing.
         /// </summary>
         internal static string HelpError {
@@ -276,6 +295,15 @@ namespace Vrc.Properties {
         internal static string HelpRanked {
             get {
                 return ResourceManager.GetString("HelpRanked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to May improve stability and reduce tearing.
+        /// </summary>
+        internal static string HelpRunWindowed {
+            get {
+                return ResourceManager.GetString("HelpRunWindowed", resourceCulture);
             }
         }
         
@@ -402,6 +430,15 @@ namespace Vrc.Properties {
         internal static string ReShadeErrorGeneric {
             get {
                 return ResourceManager.GetString("ReShadeErrorGeneric", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Run Windowed.
+        /// </summary>
+        internal static string RunWindowed {
+            get {
+                return ResourceManager.GetString("RunWindowed", resourceCulture);
             }
         }
         
