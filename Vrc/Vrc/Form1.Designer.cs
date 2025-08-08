@@ -65,9 +65,7 @@ namespace Vrc
             this.mainPanel.BorderPanelStyle = 0;
             this.mainPanel.Controls.Add(this.PostprocessingQualityLabel);
             this.mainPanel.Controls.Add(this.PostprocessingQuality);
-            this.mainPanel.Controls.Add(this.RankedMultiplayer);
             this.mainPanel.Controls.Add(this.DisableImprovedSounds);
-            this.mainPanel.Controls.Add(this.DisableTransVegetation);
             this.mainPanel.Controls.Add(this.RunWindowed);
             this.mainPanel.Controls.Add(this.ShowFps);
             this.mainPanel.Controls.Add(this.ImprovedSoundCheck);
@@ -99,67 +97,34 @@ namespace Vrc
             this.PostprocessingQuality.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PostprocessingQuality.ForeColor = System.Drawing.Color.Black;
             this.PostprocessingQuality.FormattingEnabled = true;
-            this.PostprocessingQuality.Items.AddRange(new object[] {
-            "Extreme",
-            "Ultra",
-            "Very High",
-            "High",
-            "Medium",
-            "Low",
-            "Ultra Low"});
+            this.PostprocessingQuality.Items.AddRange(new object[] { "Extreme", "Ultra", "Very High", "High", "Medium", "Low", "Ultra Low" });
             this.PostprocessingQuality.Location = new System.Drawing.Point(319, 21);
             this.PostprocessingQuality.Name = "PostprocessingQuality";
             this.PostprocessingQuality.Size = new System.Drawing.Size(150, 23);
             this.PostprocessingQuality.TabIndex = 7;
             this.PostprocessingQuality.SelectedIndexChanged += new System.EventHandler(this.PostprocessingQuality_SelectedIndexChanged);
             // 
-            // RankedMultiplayer
-            // 
-            this.RankedMultiplayer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.RankedMultiplayer.AutoSize = true;
-            this.RankedMultiplayer.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.RankedMultiplayer.Location = new System.Drawing.Point(378, 281);
-            this.RankedMultiplayer.Name = "RankedMultiplayer";
-            this.RankedMultiplayer.Size = new System.Drawing.Size(183, 20);
-            this.RankedMultiplayer.TabIndex = 5;
-            this.RankedMultiplayer.Text = "Ranked multiplayer mode";
-            this.RankedMultiplayer.UseVisualStyleBackColor = true;
-            this.RankedMultiplayer.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
-            // 
             // DisableImprovedSounds
             // 
             this.DisableImprovedSounds.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DisableImprovedSounds.AutoSize = true;
             this.DisableImprovedSounds.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.DisableImprovedSounds.Location = new System.Drawing.Point(327, 254);
+            this.DisableImprovedSounds.Location = new System.Drawing.Point(319, 281);
             this.DisableImprovedSounds.Name = "DisableImprovedSounds";
-            this.DisableImprovedSounds.Size = new System.Drawing.Size(234, 20);
+            this.DisableImprovedSounds.Size = new System.Drawing.Size(242, 21);
             this.DisableImprovedSounds.TabIndex = 4;
             this.DisableImprovedSounds.Text = "Disable improved weapon sounds";
             this.DisableImprovedSounds.UseVisualStyleBackColor = true;
             this.DisableImprovedSounds.CheckedChanged += new System.EventHandler(this.DisableImprovedSounds_CheckedChanged);
-            // 
-            // DisableTransVegetation
-            // 
-            this.DisableTransVegetation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.DisableTransVegetation.AutoSize = true;
-            this.DisableTransVegetation.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.DisableTransVegetation.Location = new System.Drawing.Point(352, 227);
-            this.DisableTransVegetation.Name = "DisableTransVegetation";
-            this.DisableTransVegetation.Size = new System.Drawing.Size(209, 20);
-            this.DisableTransVegetation.TabIndex = 2;
-            this.DisableTransVegetation.Text = "Disable translucent vegetation";
-            this.DisableTransVegetation.UseVisualStyleBackColor = true;
-            this.DisableTransVegetation.CheckedChanged += new System.EventHandler(this.DisableTransVegetation_CheckedChanged);
             // 
             // RunWindowed
             // 
             this.RunWindowed.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.RunWindowed.AutoSize = true;
             this.RunWindowed.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.RunWindowed.Location = new System.Drawing.Point(121, 281);
+            this.RunWindowed.Location = new System.Drawing.Point(116, 281);
             this.RunWindowed.Name = "RunWindowed";
-            this.RunWindowed.Size = new System.Drawing.Size(110, 20);
+            this.RunWindowed.Size = new System.Drawing.Size(115, 21);
             this.RunWindowed.TabIndex = 2;
             this.RunWindowed.Text = "Force V-Sync";
             this.RunWindowed.UseVisualStyleBackColor = true;
@@ -170,9 +135,9 @@ namespace Vrc
             this.ShowFps.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowFps.AutoSize = true;
             this.ShowFps.CheckAlign = System.Drawing.ContentAlignment.TopRight;
-            this.ShowFps.Location = new System.Drawing.Point(140, 254);
+            this.ShowFps.Location = new System.Drawing.Point(137, 254);
             this.ShowFps.Name = "ShowFps";
-            this.ShowFps.Size = new System.Drawing.Size(91, 20);
+            this.ShowFps.Size = new System.Drawing.Size(94, 21);
             this.ShowFps.TabIndex = 1;
             this.ShowFps.Text = "Show FPS";
             this.ShowFps.UseVisualStyleBackColor = true;
@@ -184,9 +149,9 @@ namespace Vrc
             this.ImprovedSoundCheck.AutoSize = true;
             this.ImprovedSoundCheck.CheckAlign = System.Drawing.ContentAlignment.TopRight;
             this.ImprovedSoundCheck.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ImprovedSoundCheck.Location = new System.Drawing.Point(83, 227);
+            this.ImprovedSoundCheck.Location = new System.Drawing.Point(406, 254);
             this.ImprovedSoundCheck.Name = "ImprovedSoundCheck";
-            this.ImprovedSoundCheck.Size = new System.Drawing.Size(148, 20);
+            this.ImprovedSoundCheck.Size = new System.Drawing.Size(155, 21);
             this.ImprovedSoundCheck.TabIndex = 0;
             this.ImprovedSoundCheck.Text = "Improved 3D Sound";
             this.ImprovedSoundCheck.UseVisualStyleBackColor = true;
@@ -254,9 +219,9 @@ namespace Vrc
             this.ExitCheckbox.Checked = true;
             this.ExitCheckbox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ExitCheckbox.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ExitCheckbox.Location = new System.Drawing.Point(154, 12);
+            this.ExitCheckbox.Location = new System.Drawing.Point(152, 12);
             this.ExitCheckbox.Name = "ExitCheckbox";
-            this.ExitCheckbox.Size = new System.Drawing.Size(50, 20);
+            this.ExitCheckbox.Size = new System.Drawing.Size(52, 21);
             this.ExitCheckbox.TabIndex = 9;
             this.ExitCheckbox.Text = "Exit";
             this.ExitCheckbox.UseVisualStyleBackColor = true;
@@ -323,7 +288,6 @@ namespace Vrc
             // 
             // bgPicture
             // 
-            // this.bgPicture.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.bgPicture.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bgPicture.Image = global::Vrc.Properties.Resources.cc894e4b_cac2_4ff2_8327_4b787907d956;
             this.bgPicture.Location = new System.Drawing.Point(0, 0);
@@ -359,7 +323,6 @@ namespace Vrc
             ((System.ComponentModel.ISupportInitialize)(this.DiscordImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bgPicture)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         private System.Windows.Forms.Label StatusLabel;
@@ -376,16 +339,15 @@ namespace Vrc
 
         private Vrc.CustomCheckBox RunWindowed;
 
-        private Vrc.CustomCheckBox RankedMultiplayer;
-
         private Vrc.CustomCheckBox DisableImprovedSounds;
-
-        private Vrc.CustomCheckBox DisableTransVegetation;
 
         private Vrc.CustomCheckBox ShowFps;
 
         private Vrc.CustomCheckBox ImprovedSoundCheck;
 
+        private Vrc.CustomCheckBox RankedMultiplayer;
+        private Vrc.CustomCheckBox DisableTransVegetation;
+        
         private Vrc.CustomPanel mainPanel;
 
         private CustomButton HelpButton;

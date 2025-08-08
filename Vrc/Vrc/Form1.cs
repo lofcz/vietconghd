@@ -62,6 +62,9 @@ namespace Vrc
         {
             InitializeComponent(); 
 
+            DisableTransVegetation.Hide();
+            RankedMultiplayer.Hide();
+            
             // local config
             try
             {
